@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Caviste de Maussane — Caviste Conseil | Maussane-les-Alpilles | Vins & Spiritueux</title>
+<meta name="description" content="Le Caviste de Maussane — depuis 2013. Décor vintage, 400+ références, bar à vin & tapas, dégustation sur place. Aux pieds des Alpilles.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c1: #1E1830;
+    --c2: #302848;
+    --acc1: #B87860;
+    --acc2: #D8A080;
+    --cream: #F6F3F0;
+    --linen: #EDE8E2;
+    --dark: #0C0810;
+    --text: #18121C;
+    --taupe: #706068;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--cream); line-height: 1.7; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 200;
+    padding: 1rem 3rem;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,8,16,.95); backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(184,120,96,.2);
+    transition: all .3s;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+  .nav-logo-mark {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--c1), var(--acc1));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Libre Baskerville', serif; font-size: .82rem;
+    color: #fff; font-weight: 700; flex-shrink: 0; letter-spacing: -.5px;
+  }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #fff; letter-spacing: .3px; }
+  .nav-logo-text span { color: var(--acc2); }
+  .nav-right { display: flex; align-items: center; gap: 2.5rem; }
+  .nav-link { color: rgba(255,255,255,.6); font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: color .3s; }
+  .nav-link:hover { color: var(--acc2); }
+  .nav-tel { background: var(--c1); color: #fff; padding: .55rem 1.4rem; font-size: .78rem; font-weight: 600; letter-spacing: .5px; text-decoration: none; border-radius: 2px; transition: all .3s; }
+  .nav-tel:hover { background: var(--c2); }
+  @media(max-width:768px){.nav-right{display:none}}
+  @media(max-width:480px){nav{padding:.8rem 1.2rem}}
+
+  .hero {
+    min-height: 100vh; background: var(--dark);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden; padding: 0 2rem;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 70% at 78% 40%, rgba(30,24,48,.42), transparent 65%),
+      radial-gradient(ellipse 50% 45% at 15% 75%, rgba(184,120,96,.1), transparent 60%);
+  }
+  .hero-texture {
+    position: absolute; inset: 0; opacity: .035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1.2' fill='%23D8A080'/%3E%3Ccircle cx='0' cy='0' r='1.2' fill='%23D8A080'/%3E%3Ccircle cx='60' cy='0' r='1.2' fill='%23D8A080'/%3E%3Ccircle cx='0' cy='60' r='1.2' fill='%23D8A080'/%3E%3Ccircle cx='60' cy='60' r='1.2' fill='%23D8A080'/%3E%3C/svg%3E");
+  }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center;
+    position: relative; z-index: 2; padding: 8rem 0 4rem;
+  }
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr} .hero-right{display:none}}
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: .7rem;
+    font-size: .68rem; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--acc2); font-weight: 500; margin-bottom: 2rem;
+  }
+  .hero-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--acc2); opacity: .6; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 5vw, 5rem); font-weight: 400; color: #fff; line-height: 1.04; margin-bottom: .8rem; }
+  h1 em { color: var(--acc2); font-style: italic; display: block; }
+  .hero-sub { font-family: 'Libre Baskerville', serif; font-size: 1.05rem; color: rgba(255,255,255,.45); font-style: italic; margin-bottom: 2rem; }
+  .hero-desc { color: rgba(255,255,255,.58); font-size: .95rem; font-weight: 300; max-width: 480px; margin-bottom: 1.8rem; line-height: 2; }
+  .hero-desc strong { color: rgba(255,255,255,.88); font-weight: 500; }
+  .hero-rating { display: flex; align-items: center; gap: .8rem; margin-bottom: 2.8rem; }
+  .stars { color: var(--acc2); font-size: 1rem; letter-spacing: 2px; }
+  .rating-text { color: rgba(255,255,255,.4); font-size: .8rem; }
+  .rating-num { color: rgba(255,255,255,.75); font-weight: 600; font-size: .9rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--c1); color: #fff; padding: 1rem 2.4rem; text-decoration: none; font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 2px; transition: all .3s; }
+  .btn-primary:hover { background: var(--c2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(30,24,48,.35); }
+  .btn-ghost { border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.8); padding: 1rem 2.4rem; text-decoration: none; font-size: .78rem; letter-spacing: 1px; border-radius: 2px; transition: all .3s; }
+  .btn-ghost:hover { border-color: var(--acc2); color: var(--acc2); }
+
+  .hero-right { background: rgba(255,255,255,.04); border: 1px solid rgba(184,120,96,.18); padding: 2.5rem; border-radius: 4px; }
+  .hrc-title { font-size: .65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--acc2); margin-bottom: 1.8rem; font-weight: 500; }
+  .hrc-item { display: flex; align-items: flex-start; gap: 1.2rem; padding: 1rem 0; border-bottom: 1px solid rgba(184,120,96,.1); }
+  .hrc-item:last-child { border: none; }
+  .hrc-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: .1rem; }
+  .hrc-label { font-size: .62rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,.3); margin-bottom: .3rem; }
+  .hrc-val { color: rgba(255,255,255,.78); font-size: .88rem; font-weight: 300; line-height: 1.6; }
+  .open-badge { display: inline-flex; align-items: center; gap: .4rem; background: rgba(80,180,80,.12); border: 1px solid rgba(80,180,80,.3); color: #88dd88; padding: .2rem .8rem; font-size: .7rem; letter-spacing: 1px; border-radius: 30px; margin-top: .3rem; }
+  .open-dot { width: 6px; height: 6px; background: #88dd88; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
+
+  .strip { background: var(--c1); padding: 1rem 0; overflow: hidden; }
+  .strip-track { display: flex; gap: 0; white-space: nowrap; animation: ticker 26s linear infinite; }
+  @keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  .strip-item { font-size: .72rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.9); flex-shrink: 0; padding: 0 2.5rem; display: flex; align-items: center; gap: 1rem; }
+
+  section { padding: 6rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .eyebrow { font-size: .68rem; letter-spacing: 4px; text-transform: uppercase; color: var(--c1); font-weight: 600; margin-bottom: 1rem; }
+  h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; color: var(--dark); margin-bottom: 1rem; line-height: 1.15; }
+  h2 em { color: var(--c1); font-style: italic; }
+  .section-lead { color: var(--taupe); font-size: 1rem; font-weight: 300; max-width: 560px; margin-bottom: 3.5rem; line-height: 1.95; }
+
+  .about-section { background: #fff; }
+  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+  @media(max-width:768px){.about-layout{grid-template-columns:1fr;gap:3rem}}
+  .about-img-wrap { position: relative; }
+  .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; border-radius: 4px; }
+  .about-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--c1); color: #fff; padding: 1.5rem; border-radius: 4px; font-family: 'Libre Baskerville', serif; font-style: italic; text-align: center; max-width: 160px; }
+  .about-badge .n { font-size: 2rem; font-weight: 700; display: block; font-style: normal; }
+  .about-badge .l { font-size: .75rem; font-style: normal; opacity: .85; line-height: 1.3; }
+  .about-text { padding-left: 1rem; }
+  @media(max-width:768px){.about-text{padding-left:0}.about-badge{right:1rem}}
+  .about-quote { font-family: 'Libre Baskerville', serif; font-size: 1.25rem; font-style: italic; color: var(--c1); line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem; border-left: 3px solid var(--acc1); }
+  .about-body { color: var(--taupe); font-size: .97rem; line-height: 2; margin-bottom: 1.2rem; font-weight: 300; }
+  .about-body strong { color: var(--text); font-weight: 500; }
+  .about-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
+  .about-tag { background: var(--linen); color: var(--c1); padding: .4rem 1rem; font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; border-radius: 30px; }
+  .about-label { font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--taupe); margin-top: 2rem; margin-bottom: .4rem; }
+  .about-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--dark); }
+  .about-role { font-size: .85rem; color: var(--c1); font-style: italic; }
+
+  .sel-section { background: var(--cream); }
+  .sel-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5px; background: var(--linen); }
+  @media(max-width:768px){.sel-grid{grid-template-columns:1fr}}
+  .sel-card { background: #fff; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: all .4s; }
+  .sel-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg,var(--c1),var(--acc1)); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+  .sel-card:hover::before { transform: scaleX(1); }
+  .sel-card:hover { transform: translateY(-4px); box-shadow: 0 16px 50px rgba(0,0,0,.06); }
+  .sel-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
+  .sel-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dark); margin-bottom: .8rem; font-weight: 400; }
+  .sel-card p { color: var(--taupe); font-size: .9rem; line-height: 1.85; font-weight: 300; }
+  .sel-items { margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .sel-item { font-size: .7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--c1); background: var(--linen); padding: .25rem .7rem; border-radius: 2px; font-weight: 600; }
+
+  .photo-band { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 4px; height: 480px; background: var(--dark); overflow: hidden; }
+  @media(max-width:768px){.photo-band{grid-template-columns:1fr;height:260px} .photo-band > div:nth-child(2),.photo-band > div:nth-child(3){display:none}}
+  .photo-item { overflow: hidden; position: relative; }
+  .photo-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+  .photo-item:hover img { transform: scale(1.06); }
+  .photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top,rgba(0,0,0,.5),transparent 50%); pointer-events: none; }
+  .photo-caption { position: absolute; bottom: 1.5rem; left: 1.5rem; color: rgba(255,255,255,.8); font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+
+  .srv-section { background: var(--dark); }
+  .srv-section h2 { color: #fff; }
+  .srv-section h2 em { color: var(--acc2); }
+  .srv-section .section-lead { color: rgba(255,255,255,.4); }
+  .srv-section .eyebrow { color: var(--acc2); }
+  .srv-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: rgba(255,255,255,.06); }
+  @media(max-width:640px){.srv-grid{grid-template-columns:1fr}}
+  .srv-card { background: rgba(255,255,255,.025); padding: 3rem 2.5rem; transition: all .3s; border: 1px solid transparent; }
+  .srv-card:hover { background: rgba(255,255,255,.05); border-color: rgba(184,120,96,.15); }
+  .srv-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: rgba(184,120,96,.12); line-height: 1; margin-bottom: 1.2rem; font-style: italic; }
+  .srv-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #fff; margin-bottom: .8rem; font-weight: 400; }
+  .srv-card p { color: rgba(255,255,255,.42); font-size: .9rem; line-height: 1.85; font-weight: 300; }
+  .srv-tag { display: inline-block; margin-top: 1.2rem; font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--acc2); border: 1px solid rgba(184,120,96,.3); padding: .3rem .8rem; border-radius: 2px; }
+
+  .avis-section { background: var(--linen); }
+  .avis-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 2rem; }
+  .avis-score { text-align: center; background: #fff; padding: 1.8rem 2.5rem; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,.06); }
+  .avis-score-n { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--dark); display: block; line-height: 1; }
+  .avis-score-stars { color: var(--acc2); font-size: 1.1rem; letter-spacing: 2px; margin: .3rem 0; }
+  .avis-score-label { font-size: .75rem; color: var(--taupe); letter-spacing: 1px; text-transform: uppercase; }
+  .avis-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  @media(max-width:768px){.avis-grid{grid-template-columns:1fr}}
+  .avis-card { background: #fff; padding: 2.5rem; border-radius: 4px; box-shadow: 0 2px 16px rgba(0,0,0,.04); transition: all .3s; }
+  .avis-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,.08); }
+  .avis-stars { color: var(--acc2); font-size: .95rem; letter-spacing: 2px; margin-bottom: 1rem; }
+  .avis-text { font-family: 'Libre Baskerville', serif; font-size: .9rem; font-style: italic; color: var(--text); line-height: 1.8; margin-bottom: 1.2rem; }
+  .avis-author { font-size: .72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--taupe); font-weight: 500; }
+
+  .loc-section { background: #fff; }
+  .loc-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  @media(max-width:768px){.loc-layout{grid-template-columns:1fr;gap:3rem}}
+  .info-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: .5rem; }
+  @media(max-width:500px){.info-blocks{grid-template-columns:1fr}}
+  .info-block { background: var(--linen); padding: 1.8rem; border-radius: 4px; border-left: 3px solid var(--c1); }
+  .info-block-icon { font-size: 1.4rem; margin-bottom: .8rem; display: block; }
+  .info-block-label { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--taupe); margin-bottom: .4rem; font-weight: 600; }
+  .info-block-val { font-size: 1rem; color: var(--dark); font-weight: 500; }
+  .info-block-sub { font-size: .82rem; color: var(--taupe); margin-top: .2rem; font-weight: 300; }
+  .info-block a { color: var(--c1); text-decoration: none; }
+  .hours-table { margin-top: 2.5rem; }
+  .hours-title { font-size: .68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--taupe); margin-bottom: 1rem; font-weight: 600; }
+  .hours-row { display: flex; justify-content: space-between; align-items: center; padding: .7rem 0; border-bottom: 1px solid var(--linen); font-size: .88rem; }
+  .hours-day { color: var(--taupe); font-weight: 300; }
+  .hours-time { color: var(--dark); font-weight: 500; }
+  .hours-time.closed { color: rgba(30,24,48,.4); font-style: italic; font-weight: 400; }
+  .map-cta { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: 1rem; background: var(--c1); color: #fff; padding: .9rem 1.8rem; text-decoration: none; border-radius: 2px; font-size: .78rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all .3s; }
+  .map-cta:hover { background: var(--c2); }
+
+  .contact-section { background: var(--cream); }
+  .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; }
+  @media(max-width:900px){.contact-layout{grid-template-columns:1fr;gap:3rem}}
+  .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--dark); margin-top: 2.5rem; margin-bottom: .5rem; font-weight: 400; }
+  .contact-info p { color: var(--taupe); font-size: .92rem; line-height: 1.85; font-weight: 300; }
+  .contact-info a { color: var(--c1); }
+  .social-btn { display: inline-flex; align-items: center; gap: .6rem; border: 1px solid var(--linen); color: var(--taupe); padding: .7rem 1.3rem; text-decoration: none; border-radius: 2px; font-size: .78rem; font-weight: 500; transition: all .3s; margin-top: .5rem; margin-right: .5rem; }
+  .social-btn:hover { border-color: var(--c1); color: var(--c1); background: var(--linen); }
+  form { display: flex; flex-direction: column; gap: 1.2rem; }
+  label { font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--taupe); font-weight: 600; display: block; margin-bottom: .4rem; }
+  input, select, textarea { width: 100%; padding: .9rem 1.2rem; border: 1px solid rgba(0,0,0,.1); background: #fff; font-family: 'DM Sans', sans-serif; font-size: .92rem; color: var(--text); border-radius: 2px; transition: border-color .3s; -webkit-appearance: none; outline: none; }
+  input:focus, select:focus, textarea:focus { border-color: var(--c1); }
+  textarea { resize: vertical; min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  @media(max-width:500px){.form-row{grid-template-columns:1fr}}
+  .btn-submit { background: var(--c1); color: #fff; padding: 1.1rem 2.5rem; font-family: 'DM Sans', sans-serif; font-size: .78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; transition: all .3s; align-self: flex-start; }
+  .btn-submit:hover { background: var(--c2); transform: translateY(-2px); }
+  .form-note { font-size: .78rem; color: var(--taupe); margin-top: .3rem; font-style: italic; }
+
+  footer { background: var(--dark); padding: 5rem 2rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+  @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2.5rem}}
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #fff; margin-bottom: .6rem; }
+  .footer-logo span { color: var(--acc2); }
+  .footer-tagline { font-size: .82rem; color: rgba(255,255,255,.35); font-style: italic; margin-bottom: 1.3rem; }
+  .footer-desc { font-size: .85rem; color: rgba(255,255,255,.35); line-height: 1.9; font-weight: 300; }
+  .footer-col h4 { font-size: .68rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 1.2rem; font-weight: 600; }
+  .footer-col a, .footer-col p { display: block; color: rgba(255,255,255,.45); font-size: .85rem; text-decoration: none; margin-bottom: .5rem; font-weight: 300; transition: color .3s; }
+  .footer-col a:hover { color: var(--acc2); }
+  .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; align-items: center; font-size: .78rem; color: rgba(255,255,255,.22); flex-wrap: wrap; gap: 1rem; }
+  .fsoc { display: flex; gap: 1.2rem; }
+  .fsoc a { color: rgba(255,255,255,.3); font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: color .3s; }
+  .fsoc a:hover { color: var(--acc2); }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+  .hero-left > * { animation: fadeUp .8s both; }
+  .hero-eyebrow { animation-delay: .1s; }
+  h1 { animation-delay: .25s; }
+  .hero-sub { animation-delay: .4s; }
+  .hero-desc { animation-delay: .5s; }
+  .hero-rating { animation-delay: .6s; }
+  .hero-btns { animation-delay: .7s; }
+  .map-embed { border-radius: 4px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.1); }
+  .map-embed iframe { width: 100%; height: 360px; border: none; display: block; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">CM</div>
+    <span class="nav-logo-text">Le Caviste <span>de Maussane</span></span>
+  </a>
+  <div class="nav-right">
+    <a href="#selection" class="nav-link">Sélection</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#avis" class="nav-link">Avis</a>
+    <a href="#localisation" class="nav-link">Localisation</a>
+    <a href="tel:+33490472620" class="nav-tel">📞 04 90 47 26 20</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Caviste Conseil · Maussane-les-Alpilles · Depuis 2013 · Alpilles</div>
+      <h1>Le marchand
+de bonheur<em>des Alpilles</em></h1>
+      <p class="hero-sub">Jérôme — caviste conseil, décor vintage & bar à tapas</p>
+      <p class="hero-desc"><strong>Jérôme</strong>, caviste conseil, vous accueille dans sa jolie boutique au décor vintage et rétro, à deux pas de la place du village. Plus de <strong>400 références</strong> de vins des Alpilles et de France entière, champagnes, bières, spiritueux — et un verre de dégustation offert à chaque visite.</p>
+      <div class="hero-rating">
+        <span class="stars">★★★★</span>
+        <span class="rating-num">4,7</span>
+        <span class="rating-text">— 66 avis Google vérifiés</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Nous contacter</a>
+        <a href="#selection" class="btn-ghost">Découvrir la sélection</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hrc-title">Informations pratiques</div>
+      <div class="hrc-item">
+        <div class="hrc-icon">📍</div>
+        <div><div class="hrc-label">Adresse</div><div class="hrc-val">60 Avenue de la Vallée des Baux<br>13520 Maussane-les-Alpilles</div></div>
+      </div>
+      <div class="hrc-item">
+        <div class="hrc-icon">⏰</div>
+        <div>
+          <div class="hrc-label">Horaires</div>
+          <div class="hrc-val">Mar–Sam · 10h–12h30 & 16h–19h</div>
+          <div class="open-badge"><span class="open-dot"></span>Ouvert</div>
+        </div>
+      </div>
+      <div class="hrc-item">
+        <div class="hrc-icon">📞</div>
+        <div><div class="hrc-label">Téléphone</div><div class="hrc-val"><a href="tel:+33490472620" style="color:inherit;text-decoration:none">04 90 47 26 20</a></div></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item">🍷 400+ références vins ◆</span><span class="strip-item">🎸 Décor vintage & rétro ◆</span><span class="strip-item">🥂 Dégustation sur place ◆</span><span class="strip-item">🍕 Bar à vin & tapas ◆</span><span class="strip-item">🏔️ Vins des Alpilles ◆</span><span class="strip-item">⭐ 4,7/5 · 66 avis ◆</span><span class="strip-item">🍷 400+ références vins ◆</span><span class="strip-item">🎸 Décor vintage & rétro ◆</span><span class="strip-item">🥂 Dégustation sur place ◆</span><span class="strip-item">🍕 Bar à vin & tapas ◆</span><span class="strip-item">🏔️ Vins des Alpilles ◆</span><span class="strip-item">⭐ 4,7/5 · 66 avis ◆</span>
+  </div>
+</div>
+
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=900&auto=format&fit=crop&q=80" alt="Jérôme Le Caviste de Maussane boutique vintage" class="about-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;width:100%;aspect-ratio:3/4;background:linear-gradient(145deg,#1E1830,#0C0810);border-radius:4px;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,.08)">🍷</div>
+        <div class="about-badge">
+          <span class="n">2013</span>
+          <span class="l">Ouverture de la cave</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="eyebrow">Votre caviste</div>
+        <h2>Jérôme,<br><em>votre marchand de bonheur</em></h2>
+        <blockquote class="about-quote">« Une personnalité qui sait toujours vous faire plaisir ! Besoin d'un simple moment convivial ? Alors allez chez lui… »</blockquote>
+        <p class="about-body">Depuis 2013, <strong>Le Caviste de Maussane</strong> est bien plus qu'une simple cave à vins. Dans sa boutique au décor <strong>vintage et rétro</strong> — objets chinés en brocante, guinguette intérieure — il reçoit ses clients avec sourire et générosité, verre de dégustation à la main.</p>
+        <p class="about-body">Sa sélection de plus de <strong>400 références</strong> couvre les vins des Alpilles et de toute la France : Bordeaux, Bourgogne, Alsace, vins bio, spiritueux, bières et champagnes.</p>
+        <div class="about-tags"><span class="about-tag">Décor vintage</span><span class="about-tag">400+ références</span><span class="about-tag">Vins des Alpilles</span><span class="about-tag">Bar à vins & tapas</span><span class="about-tag">Dégustation offerte</span></div>
+        <div class="about-label">Votre caviste</div>
+        <div class="about-name">Jérôme</div>
+        <div class="about-role">Caviste Conseil · Le Caviste de Maussane · Alpilles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sel-section" id="selection">
+  <div class="container">
+    <div class="eyebrow">La cave</div>
+    <h2>Plus de 400 <em>références</em></h2>
+    <p class="section-lead">Vins des Alpilles et de toute la France, champagnes, spiritueux, bières — le tout dans un cadre vintage unique aux pieds des Alpilles.</p>
+    <div class="sel-grid">
+      <div class="sel-card"><span class="sel-icon">🏔️</span><h3>Vins des Alpilles</h3><p>Des vins issus des domaines alpillais, de la vallée des Baux et des Costières — des terroirs provençaux d'exception à quelques kilomètres de la boutique.</p><div class="sel-items"><span class="sel-item">Alpilles</span><span class="sel-item">Baux de Provence</span><span class="sel-item">Costières</span><span class="sel-item">AOP Provence</span></div></div><div class="sel-card"><span class="sel-icon">🍷</span><h3>France entière</h3><p>Bordeaux, Bourgogne, Alsace, Loire, Rhône, Languedoc — une sélection large couvrant les grands terroirs de France pour tous les goûts.</p><div class="sel-items"><span class="sel-item">Bordeaux</span><span class="sel-item">Bourgogne</span><span class="sel-item">Alsace</span><span class="sel-item">Loire</span><span class="sel-item">Rhône</span></div></div><div class="sel-card"><span class="sel-icon">🌿</span><h3>Vins bio & biodynamie</h3><p>Une belle sélection de vins certifiés bio et biodynamiques pour les amateurs de vins respectueux de l'environnement et du vivant.</p><div class="sel-items"><span class="sel-item">Bio</span><span class="sel-item">Biodynamie</span><span class="sel-item">Demeter</span><span class="sel-item">Nature</span></div></div><div class="sel-card"><span class="sel-icon">🥂</span><h3>Champagnes & Pétillants</h3><p>Une gamme de champagnes et vins effervescents pour tous vos moments festifs — de l'entrée de gamme au prestige.</p><div class="sel-items"><span class="sel-item">Champagnes</span><span class="sel-item">Crémants</span><span class="sel-item">Pétillants</span></div></div><div class="sel-card"><span class="sel-icon">🥃</span><h3>Spiritueux & Bières</h3><p>Whisky, rhum, cognac, gin et cidres — une cave complète qui satisfait tous les amateurs, y compris ceux qui préfèrent le houblon aux tanins.</p><div class="sel-items"><span class="sel-item">Whisky</span><span class="sel-item">Rhum</span><span class="sel-item">Gin</span><span class="sel-item">Bières</span></div></div><div class="sel-card"><span class="sel-icon">🍕</span><h3>Bar à vin & tapas</h3><p>Dégustez sur place ! Jérôme a aménagé un espace bar à vin et tapas pour que vous profitiez de vos achats dans l'instant, avec style.</p><div class="sel-items"><span class="sel-item">Dégustation sur place</span><span class="sel-item">Tapas</span><span class="sel-item">Ambiance vintage</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="photo-band">
+  <div class="photo-item"><img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=900&auto=format&fit=crop&q=80" alt="Le Caviste de Maussane décor vintage" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:3rem;opacity:.15;background:#0C0810">🍷</div><div class="photo-overlay"></div><div class="photo-caption">Décor vintage & rétro</div></div><div class="photo-item"><img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=900&auto=format&fit=crop&q=80" alt="Alpilles vignobles" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:3rem;opacity:.15;background:#0C0810">🍷</div><div class="photo-overlay"></div><div class="photo-caption">Vins des Alpilles</div></div><div class="photo-item"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Champagnes sélectionnés" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:3rem;opacity:.15;background:#0C0810">🍷</div><div class="photo-overlay"></div><div class="photo-caption">Champagnes & bulles</div></div>
+</div>
+
+<section class="srv-section" id="services">
+  <div class="container">
+    <div class="eyebrow">Services</div>
+    <h2>Un caviste <em>hors norme</em></h2>
+    <p class="section-lead">Dégustation offerte à chaque visite, bar à tapas, conseil sur mesure et une bonne dose de bonne humeur — bienvenue chez Jérôme.</p>
+    <div class="srv-grid">
+      <div class="srv-card"><div class="srv-num">01</div><h3>Dégustation offerte</h3><p>À chaque visite, Jérôme vous propose un verre de dégustation. Une façon unique d'acheter en connaissance de cause dans une ambiance décontractée.</p><span class="srv-tag">À chaque visite</span></div><div class="srv-card"><div class="srv-num">02</div><h3>Bar à vin & tapas</h3><p>Restez sur place ! La boutique dispose d'un espace bar pour déguster vos coups de cœur accompagnés de planches de tapas dans le décor vintage.</p><span class="srv-tag">Sur place</span></div><div class="srv-card"><div class="srv-num">03</div><h3>Conseil personnalisé</h3><p>Jérôme prend le temps de vous écouter, de comprendre vos goûts et vos occasions. Son expertise et sa bonne humeur font de chaque visite un moment unique.</p><span class="srv-tag">À l'écoute</span></div><div class="srv-card"><div class="srv-num">04</div><h3>Livraison locale</h3><p>Pour vos commandes importantes, Le Caviste de Maussane peut livrer dans le secteur des Alpilles. Contactez Jérôme pour les modalités.</p><span class="srv-tag">Alpilles & environs</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="avis-section" id="avis">
+  <div class="container">
+    <div class="avis-header">
+      <div><div class="eyebrow">Ils en parlent</div><h2>Avis <em>clients</em></h2></div>
+      <div class="avis-score">
+        <span class="avis-score-n">4,7</span>
+        <div class="avis-score-stars">★★★★</div>
+        <div class="avis-score-label">66 avis Google</div>
+      </div>
+    </div>
+    <div class="avis-grid">
+      <div class="avis-card"><div class="avis-stars">★★★★★</div><p class="avis-text">« Jérôme, une personnalité qui sait toujours vous faire plaisir ! Besoin d'un simple moment convivial, alors allez chez lui. Bref, plus qu'un simple caviste, un véritable marchand de bonheur ! »</p><div class="avis-author">Client Tripadvisor — Google Maps</div></div><div class="avis-card"><div class="avis-stars">★★★★★</div><p class="avis-text">« Le caviste de Maussane est une très bonne adresse. On est toujours reçus avec le sourire et un petit verre de dégustation ! Les conseils nous font découvrir les vins de la région et on n'est jamais déçus. »</p><div class="avis-author">Cliente — Google Maps</div></div><div class="avis-card"><div class="avis-stars">★★★★★</div><p class="avis-text">« Le Caviste de Maussane dispose d'un personnel très compétent qui peut recommander le meilleur vin pour presque tous les types de repas. Le propriétaire parle même suédois ! »</p><div class="avis-author">Visiteurs suédois — Google Maps</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="loc-section" id="localisation">
+  <div class="container">
+    <div class="loc-layout">
+      <div>
+        <div class="eyebrow">Venir nous voir</div>
+        <h2>Au cœur<br>de <em>Maussane-les-Alpilles</em></h2>
+        <p style="color:var(--taupe);font-size:.95rem;line-height:1.95;font-weight:300;margin-bottom:2rem">Le Caviste de Maussane est installé avenue de la Vallée des Baux, devant la place aux cafetiers du village, à quelques minutes du centre des Alpilles.</p>
+        <div class="info-blocks">
+          <div class="info-block"><span class="info-block-icon">📍</span><div class="info-block-label">Adresse</div><div class="info-block-val">60 Av. de la Vallée des Baux</div><div class="info-block-sub">Maussane-les-Alpilles · BdR 13520</div></div>
+          <div class="info-block"><span class="info-block-icon">📞</span><div class="info-block-label">Téléphone</div><div class="info-block-val"><a href="tel:+33490472620">04 90 47 26 20</a></div><div class="info-block-sub">Appel / SMS</div></div>
+          <div class="info-block"><span class="info-block-icon">⭐</span><div class="info-block-label">Note Google</div><div class="info-block-val">4,7 / 5</div><div class="info-block-sub">66 avis vérifiés</div></div>
+          <div class="info-block"><span class="info-block-icon">🚗</span><div class="info-block-label">Services</div><div class="info-block-val">Achats · Bar à vins · Livraison</div><div class="info-block-sub">Voir les options</div></div>
+        </div>
+        <div class="hours-table">
+          <div class="hours-title">Horaires d'ouverture</div>
+          <div class="hours-row"><span class="hours-day">Lundi</span><span class="hours-time closed">Fermé</span></div><div class="hours-row"><span class="hours-day">Mardi</span><span class="hours-time">10h–12h30 & 16h–19h</span></div><div class="hours-row"><span class="hours-day">Mercredi</span><span class="hours-time">10h–12h30 (fermé PM)</span></div><div class="hours-row"><span class="hours-day">Jeudi</span><span class="hours-time">10h–12h30 & 16h–19h</span></div><div class="hours-row"><span class="hours-day">Vendredi</span><span class="hours-time">10h–12h30 & 16h–19h</span></div><div class="hours-row"><span class="hours-day">Samedi</span><span class="hours-time">10h–12h30 & 16h–19h</span></div><div class="hours-row"><span class="hours-day">Dimanche</span><span class="hours-time closed">Fermé</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2300!2d4.8017!3d43.7208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLe%20Caviste%20de%20Maussane%2C%2060%20Avenue%20de%20la%20Vall%C3%A9e%20des%20Baux%2C%2013520%20Maussane-les-Alpilles!5e0!3m2!1sfr!2sfr!4v1"
+            allowfullscreen loading="lazy"
+            title="Localisation Le Caviste de Maussane">
+          </iframe>
+        </div>
+        <a href="https://maps.google.com/?q=43.7210,4.8020" target="_blank" class="map-cta">📍 Ouvrir dans Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="eyebrow">Contact</div>
+        <h2>Une question ?<br><em>Écrivez-nous</em></h2>
+        <p>Pour une dégustation, un coffret, ou simplement pousser la porte — Jérôme vous accueille avec le sourire.</p>
+        <h3>📞 Téléphone</h3><p><a href="tel:+33490472620">04 90 47 26 20</a></p>
+        
+        <h3>📍 Adresse</h3><p>60 Avenue de la Vallée des Baux<br>13520 Maussane-les-Alpilles</p>
+        <h3>⏰ Horaires</h3><p>Mar–Sam · 10h–12h30 & 16h–19h</p>
+        <a href="https://www.facebook.com/lecavistedemaussane/" target="_blank" class="social-btn">Facebook</a>
+        
+      </div>
+      <form>
+        <div class="form-row">
+          <div><label>Prénom & Nom *</label><input type="text" placeholder="Dupont Marie" required></div>
+          <div><label>Téléphone</label><input type="tel" placeholder="06 XX XX XX XX"></div>
+        </div>
+        <div><label>E-mail *</label><input type="email" placeholder="marie@email.com" required></div>
+        <div><label>Objet</label>
+          <select>
+            <option value="">-- Sélectionnez --</option>
+            <option>Conseil vin / accord mets</option>
+            <option>Coffret ou carte cadeau</option>
+            <option>Dégustation / Atelier</option>
+            <option>Commande professionnelle</option>
+            <option>Renseignements</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div><label>Message</label><textarea rows="5" placeholder="Dites-nous ce qu'il vous faut..."></textarea></div>
+        <button type="submit" class="btn-submit">Envoyer ma demande</button>
+        <p class="form-note">Réponse personnelle garantie sous 24h</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Le Caviste <span>de Maussane</span></div>
+      <div class="footer-tagline">Caviste Conseil · Maussane-les-Alpilles · Depuis 2013</div>
+      <p class="footer-desc">Jérôme vous accueille dans sa boutique vintage aux pieds des Alpilles pour 400+ références de vins, champagnes, spiritueux et un bar à vin & tapas unique.</p>
+    </div>
+    <div class="footer-col">
+      <h4>La cave</h4>
+      <a href="#selection">Vins des Alpilles</a><a href="#selection">France entière</a><a href="#selection">Vins bio</a><a href="#selection">Champagnes</a><a href="#selection">Spiritueux & Bières</a><a href="#selection">Bar à vin & tapas</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>60 Av. de la Vallée des Baux</p><p>13520 Maussane-les-Alpilles</p>
+      <a href="tel:+33490472620">04 90 47 26 20</a>
+      
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Le Caviste de Maussane · Maussane-les-Alpilles</p>
+    <div class="fsoc">
+      <a href="https://www.facebook.com/lecavistedemaussane/" target="_blank">Facebook</a>
+      
+      <a href="https://maps.google.com/?q=43.7210,4.8020" target="_blank">Google Maps</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
