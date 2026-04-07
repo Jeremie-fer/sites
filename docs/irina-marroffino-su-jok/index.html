@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irina Marroffino — Su Jok Thérapie | Su Jok Thérapie</title>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#c85a1a;--c2:#e88040;--cream:#fdf8f2;--warm:#f8ece0;--dark:#2a1008;--text:#2a1008;--sub-c:#6a3a18;--spec-bg:rgba(200,90,26,.15);--spec-bd:rgba(232,128,64,.25)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nl{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);letter-spacing:.5px}.nl em{color:var(--c1);font-style:italic}
+.nt{background:var(--c1);color:#fff;padding:.5rem 1.3rem;border-radius:4px;font-size:.82rem;font-weight:500;text-decoration:none;transition:all .3s}.nt:hover{background:var(--c2)}
+.hero{min-height:100vh;background:linear-gradient(160deg,#2a1008 0%,#401808 55%,#c85a1a 100%);display:flex;align-items:center;padding:5rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:0;bottom:0;width:400px;height:400px;border-radius:50%;background:rgba(232,128,64,.12);transform:translate(30%,30%)}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.tag{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c2);font-weight:400;margin-bottom:1.5rem}
+h1{font-family:'Baskervville',serif;font-size:clamp(2.5rem,4.5vw,4rem);color:#fff;line-height:1.1;margin-bottom:1rem;font-weight:400}
+h1 em{color:var(--c2);font-style:italic;display:block}
+.specialites{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.spec{background:var(--spec-bg);border:1px solid var(--spec-bd);color:rgba(255,255,255,.82);padding:.25rem .75rem;font-size:.75rem}
+.hero-desc{color:rgba(255,255,255,.65);font-size:.95rem;font-weight:300;max-width:500px;margin-bottom:2rem;line-height:1.95}
+.stars{color:var(--c2);margin-bottom:.2rem}.rev{color:rgba(255,255,255,.38);font-size:.8rem;margin-bottom:2.5rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.b1{background:var(--c1);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:500;transition:all .3s}.b1:hover{background:var(--c2)}
+.b2{border:1px solid rgba(255,255,255,.22);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:300;transition:all .3s}.b2:hover{border-color:var(--c2);color:var(--c2)}
+.hero-info{background:rgba(255,255,255,.06);border:1px solid var(--spec-bd);padding:2rem}
+@media(max-width:900px){.hero-info{display:none}}
+.hi-title{font-family:'Baskervville',serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--c2);margin-bottom:1.2rem}
+.hi-item{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:flex-start;gap:.8rem}.hi-item:last-child{border:none}
+.hi-ic{font-size:.9rem;flex-shrink:0;margin-top:.2rem}
+.hi-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);display:block}
+.hi-val{font-size:.88rem;color:rgba(255,255,255,.82);font-weight:300}
+.hero-img-wrap{position:relative;z-index:2}
+.hero-img{width:100%;height:340px;object-fit:cover;border-radius:4px;display:block;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+section{padding:5.5rem 2rem}.container{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c1);font-weight:400;margin-bottom:1rem}
+h2{font-family:'Baskervville',serif;font-size:clamp(1.8rem,3vw,3rem);color:var(--dark);margin-bottom:1rem;line-height:1.2;font-weight:400}h2 em{color:var(--c1);font-style:italic}
+.sub{color:var(--sub-c);font-size:.97rem;font-weight:300;max-width:540px;margin-bottom:3rem;line-height:1.9}
+.approches-section{background:#fff}
+.appr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm)}
+@media(max-width:768px){.appr-grid{grid-template-columns:1fr}}
+.acard{background:#fff;padding:2.5rem 2rem;transition:all .3s}.acard:hover{background:var(--cream)}
+.ac-icon{font-size:2rem;display:block;margin-bottom:1rem}
+.acard h3{font-family:'Baskervville',serif;font-size:1.15rem;color:var(--dark);margin-bottom:.5rem;font-weight:400}
+.acard p{font-size:.87rem;color:var(--sub-c);font-weight:300;line-height:1.7}
+.about-section{background:var(--warm)}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.about-g{grid-template-columns:1fr;gap:3rem}}
+.about-text p{color:var(--sub-c);font-weight:300;margin-bottom:1.2rem;line-height:1.9}
+.about-mods{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.lm{background:#fff;color:var(--c1);border:1px solid rgba(0,0,0,.1);padding:.3rem .85rem;font-size:.78rem}
+.about-box{background:var(--dark);padding:2.5rem;color:#fff}
+.lb-q{font-family:'Baskervville',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:2rem}
+.lb-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.lbs{background:rgba(255,255,255,.05);padding:1rem;text-align:center}
+.lbs-n{font-family:'Baskervville',serif;font-size:1.8rem;color:var(--c2);display:block}.lbs-l{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.35)}
+.publics-section{background:#fff}
+.pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:900px){.pub-grid{grid-template-columns:1fr 1fr}}@media(max-width:500px){.pub-grid{grid-template-columns:1fr}}
+.pcard{background:var(--cream);padding:2rem;text-align:center;border-bottom:2px solid var(--c1);transition:all .3s}.pcard:hover{transform:translateY(-4px)}
+.pc-icon{font-size:2rem;margin-bottom:.8rem;display:block}
+.pcard h3{font-family:'Baskervville',serif;font-size:1rem;color:var(--dark);margin-bottom:.3rem;font-weight:400}
+.pcard p{font-size:.82rem;color:var(--sub-c);font-weight:300}
+.avis-section{background:var(--cream)}
+.av-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}@media(max-width:768px){.av-grid{grid-template-columns:1fr}}
+.av{background:#fff;padding:2rem;border-top:2px solid var(--c1)}
+.av-stars{color:var(--c1);margin-bottom:.8rem}
+.av-text{font-family:'Baskervville',serif;font-size:1rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:.8rem}
+.av-auth{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--c1);font-weight:500}
+.form-section{background:var(--dark)}
+.form-g{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+@media(max-width:768px){.form-g{grid-template-columns:1fr;gap:3rem}}
+.form-g .eyebrow{color:var(--c2)}.form-g h2{color:#fff}.form-g .sub{color:rgba(255,255,255,.5)}
+.fci{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);margin-bottom:.8rem}
+.fci h4{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:.1rem}
+.fci p,.fci a{font-size:.9rem;color:#fff;text-decoration:none}.fci a{color:var(--c2)}
+form{display:flex;flex-direction:column;gap:1.2rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}@media(max-width:500px){.frow{grid-template-columns:1fr}}
+label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:400;display:block;margin-bottom:.4rem}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.12);font-size:.92rem;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#fff;outline:none;transition:border .25s}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}
+input:focus,select:focus,textarea:focus{border-color:var(--c2)}
+select option{background:var(--dark)}textarea{resize:vertical}
+.btn-sub{background:var(--c1);color:#fff;padding:1rem 2.5rem;border:none;font-size:.9rem;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:all .3s;align-self:flex-start}.btn-sub:hover{background:var(--c2)}
+.fn{font-size:.78rem;color:rgba(255,255,255,.3);font-weight:300}
+footer{background:#0a0a0a;color:rgba(255,255,255,.3);text-align:center;padding:2rem;font-size:.82rem}footer strong{color:var(--c2)}
+
+</style></head>
+<body>
+<nav><div class="nl">Irina <em>Marroffino</em></div><a href="tel:+33651111435" class="nt">06 51 11 14 35</a></nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="tag">Su Jok Thérapie · Médecine Alternative Coréenne · Réflexologie</div>
+      <h1>Irina Marroffino<br><em>Su Jok Thérapie</em></h1>
+      <div class="specialites"><span class="spec">🤲 Su Jok (mains & pieds)</span><span class="spec">⚡ Réflexologie énergétique</span><span class="spec">🌿 Médecine coréenne</span><span class="spec">🔋 Rééquilibrage énergétique</span><span class="spec">💊 Sans médicaments</span><span class="spec">🌏 Technique du Prof. Park Jae Woo</span></div>
+      <p class="hero-desc">Praticienne certifiée en Su Jok Thérapie, méthode coréenne du Professeur Park Jae Woo. En travaillant sur les points réflexes des mains (Su) et des pieds (Jok), je rééquilibre les énergies de votre corps pour favoriser la guérison naturelle.</p>
+      <div class="stars">★★★★★</div>
+      <p class="rev">5,0 · 5 avis Google · Jusqu'à 19h</p>
+      <div class="btns"><a href="#rdv" class="b1">Prendre rendez-vous</a><a href="tel:+33651111435" class="b2">06 51 11 14 35</a></div>
+    </div>
+    <div class="hero-info"><div class="hi-title">Cabinet Su Jok</div><div class="hi-item"><span class="hi-ic">📞</span><div><span class="hi-label">Téléphone</span><span class="hi-val">06 51 11 14 35</span></div></div><div class="hi-item"><span class="hi-ic">⏰</span><div><span class="hi-label">Horaires</span><span class="hi-val">Jusqu'à 19h · Sur rendez-vous</span></div></div><div class="hi-item"><span class="hi-ic">🤲</span><div><span class="hi-label">Technique</span><span class="hi-val">Su = Main · Jok = Pied · Corée du Sud</span></div></div><div class="hi-item"><span class="hi-ic">💊</span><div><span class="hi-label">Approche</span><span class="hi-val">Sans médicaments · Non invasif · Sûr</span></div></div><div class="hi-item"><span class="hi-ic">⭐</span><div><span class="hi-label">Google</span><span class="hi-val">5,0 · 5 avis</span></div></div></div>
+  </div>
+</section>
+<section class="approches-section" id="approches">
+  <div class="container">
+    <div class="eyebrow">La Su Jok Thérapie</div><h2>La puissance des mains<br>et des <em>pieds</em></h2>
+    <div class="appr-grid"><div class="acard"><span class="ac-icon">🤲</span><h3>Principe Su Jok</h3><p>Su (main) et Jok (pied) sont des représentations miniatures du corps humain. Chaque organe, articulation et système corporel y possède son point de correspondance précis.</p></div><div class="acard"><span class="ac-icon">⚡</span><h3>Stimulation des zones réflexes</h3><p>Par pression, massage ou stimulation douce des points réflexes sur les mains et les pieds, on agit sur les organes et systèmes correspondants pour rétablir l'équilibre.</p></div><div class="acard"><span class="ac-icon">🌿</span><h3>Thérapie par les graines</h3><p>Application de graines végétales sur les points de correspondance — une méthode naturelle et douce qui prolonge l'effet thérapeutique entre les séances.</p></div><div class="acard"><span class="ac-icon">🔋</span><h3>Rééquilibrage énergétique</h3><p>Restauration de l'équilibre des méridiens énergétiques en utilisant les principes de la médecine traditionnelle asiatique — similaire à l'acupuncture mais sur les extrémités uniquement.</p></div><div class="acard"><span class="ac-icon">🌀</span><h3>Twist Thérapie</h3><p>Mouvements de torsion en spirale sur les articulations des mains et des pieds pour soulager douleurs soudaines, douleurs chroniques et déséquilibres émotionnels.</p></div><div class="acard"><span class="ac-icon">🧘</span><h3>Approche globale</h3><p>Le Su Jok ne traite pas seulement les symptômes physiques — il agit aussi sur le stress, l'anxiété, la fatigue et les déséquilibres émotionnels, pour une guérison holistique.</p></div></div>
+  </div>
+</section>
+<section class="about-section">
+  <div class="container">
+    <div class="about-g">
+      <div class="about-text">
+        <div class="eyebrow">À propos</div><h2>Irina <em>Marroffino</em></h2>
+        <p>Praticienne certifiée en Su Jok Thérapie, j'ai découvert cette méthode coréenne élaborée par le Professeur Park Jae Woo à l'Université de Séoul dans les années 1980. Une révélation qui a transformé ma façon de concevoir la santé.</p><p>Le Su Jok est reconnu dans de nombreux pays — États-Unis, Russie, Inde, Israël — et est même utilisé par des médecins du Centre Spatial Russe pour le traitement des cosmonautes. Son efficacité est démontrée sur un large éventail de pathologies.</p><p>Mon approche est non invasive, sans médicaments, et adaptable à tous les âges. Je reçois en cabinet jusqu'à 19h, sur rendez-vous, pour des séances individuelles et personnalisées.</p>
+        <div class="about-mods"><span class="lm">Su Jok certifiée</span><span class="lm">Thérapie coréenne</span><span class="lm">Graines végétales</span><span class="lm">Twist Thérapie</span><span class="lm">Sans médicaments</span></div>
+      </div>
+      <div class="about-box">
+        <p class="lb-q">« Le Su Jok permet au corps de retrouver ses capacités naturelles d'auto-guérison en rétablissant l'équilibre énergétique là où il a été perturbé. »</p>
+        <div class="lb-stats"><div class="lbs"><span class="lbs-n">5,0★</span><div class="lbs-l">Google</div></div><div class="lbs"><span class="lbs-n">5</span><div class="lbs-l">Avis</div></div><div class="lbs"><span class="lbs-n">1987</span><div class="lbs-l">Technique créée</div></div><div class="lbs"><span class="lbs-n">Corée</span><div class="lbs-l">Origine</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="publics-section">
+  <div class="container">
+    <div class="eyebrow">Pour qui ?</div><h2>Une thérapie pour<br><em>tous et toutes</em></h2>
+    <div class="pub-grid"><div class="pcard"><span class="pc-icon">💊</span><h3>Douleurs chroniques</h3><p>Lombaires, migraines, arthralgie, tensions...</p></div><div class="pcard"><span class="pc-icon">😰</span><h3>Stress & anxiété</h3><p>Fatigue, insomnie, troubles émotionnels...</p></div><div class="pcard"><span class="pc-icon">🌿</span><h3>Troubles digestifs</h3><p>Digestion difficile, intestins, foie...</p></div><div class="pcard"><span class="pc-icon">🧒</span><h3>Tous les âges</h3><p>Enfants, adultes, personnes âgées...</p></div></div>
+  </div>
+</section>
+<section class="avis-section">
+  <div class="container">
+    <div class="eyebrow">Témoignages</div>
+    <h2>5,0 · 5 avis · <em>5 étoiles</em></h2>
+    <div class="av-grid"><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« J'étais sceptique sur le Su Jok mais les résultats m'ont bluffée ! Mes douleurs lombaires chroniques ont disparu en 2 séances. Une méthode incroyablement efficace. »</p><div class="av-auth">Patient(e) — Google</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Irina est une praticienne très compétente et bienveillante. Elle m'a expliqué chaque étape du soin. J'ai ressenti des effets dès le lendemain. Je recommande vivement ! »</p><div class="av-auth">Patient(e) — Google</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Le Su Jok a soulagé mes migraines que la médecine conventionnelle n'arrivait pas à traiter. Une découverte extraordinaire grâce à Irina. Merci infiniment. »</p><div class="av-auth">Patient(e) — Google</div></div></div>
+  </div>
+</section>
+<section class="form-section" id="rdv">
+  <div class="container">
+    <div class="form-g">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Prenez<br><em>contact</em></h2>
+        <p class="sub">Je vous réponds rapidement pour organiser votre première consultation.</p>
+        <div class="fci"><h4>Téléphone</h4><p><a href="tel:+33651111435">06 51 11 14 35</a></p></div>
+        <div class="fci"><h4>Lieu</h4><p>Cabinet · Sur rendez-vous</p></div>
+        <div class="fci"><h4>Horaires</h4><p>Jusqu'à 19h · 06 51 11 14 35</p></div>
+      </div>
+      <form name="rdv-irina-marroffino-sujok" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rdv-irina-marroffino-sujok">
+        <p style="display:none"><input name="bot-field"></p>
+        <div class="frow"><div><label>Nom *</label><input type="text" name="nom" required placeholder="Prénom Nom"></div><div><label>Téléphone *</label><input type="tel" name="tel" required placeholder="06 XX XX XX XX"></div></div>
+        <div><label>Type de demande</label><select name="type"><option value="">-- Sélectionnez --</option><option>Séance Su Jok individuelle</option><option>Douleurs chroniques</option><option>Migraines / céphalées</option><option>Stress / anxiété</option><option>Troubles digestifs</option><option>Insomnie</option><option>Première consultation</option></select></div>
+        <div><label>Message</label><textarea name="message" rows="4" placeholder="Décrivez brièvement votre demande..."></textarea></div>
+        <button type="submit" class="btn-sub">Envoyer</button>
+        <p class="fn">Confidentialité garantie · Réponse sous 24h</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer><p><strong>Irina Marroffino — Su Jok Thérapie · Médecine Alternative Coréenne · 06 51 11 14 35</strong></p></footer>
+</body></html>
