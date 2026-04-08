@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeanne Bardot — Art-thérapeute · Psychothérapeute · Créativité & Thérapie</title>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#a04a20;--c2:#d07840;--cream:#fdf8f3;--warm:#f5ead8;--dark:#201008;--text:#281408;--sub:#6a3010;--hero-bg:linear-gradient(160deg,#201008 0%,#301808 55%,#a04a20 100%)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nl{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);letter-spacing:.5px}
+.nl em{color:var(--c1);font-style:italic}
+.nt{background:var(--c1);color:#fff;padding:.5rem 1.3rem;border-radius:4px;font-size:.82rem;font-weight:500;text-decoration:none;transition:all .3s}.nt:hover{background:var(--c2)}
+.hero{min-height:100vh;background:var(--hero-bg);display:flex;align-items:center;padding:5rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:0;bottom:0;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.06);transform:translate(30%,30%)}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.tag{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c2);font-weight:400;margin-bottom:1.5rem}
+h1{font-family:'Baskervville',serif;font-size:clamp(2.5rem,4.5vw,4rem);color:#fff;line-height:1.1;margin-bottom:1rem;font-weight:400}
+h1 em{color:var(--c2);font-style:italic;display:block}
+.specialites{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.spec{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.85);padding:.25rem .75rem;font-size:.75rem}
+.hero-desc{color:rgba(255,255,255,.65);font-size:.95rem;font-weight:300;max-width:500px;margin-bottom:2rem;line-height:1.95}
+.stars{color:var(--c2);margin-bottom:.2rem}.rev{color:rgba(255,255,255,.38);font-size:.8rem;margin-bottom:2.5rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.b1{background:var(--c1);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:500;transition:all .3s}.b1:hover{background:var(--c2)}
+.b2{border:1px solid rgba(255,255,255,.22);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:300;transition:all .3s}.b2:hover{border-color:var(--c2);color:var(--c2)}
+.hero-info{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);padding:2rem}
+@media(max-width:900px){.hero-info{display:none}}
+.hi-title{font-family:'Baskervville',serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--c2);margin-bottom:1.2rem}
+.hi-item{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:flex-start;gap:.8rem}.hi-item:last-child{border:none}
+.hi-ic{font-size:.9rem;flex-shrink:0;margin-top:.2rem}.hi-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);display:block}
+.hi-val{font-size:.88rem;color:rgba(255,255,255,.82);font-weight:300}
+section{padding:5.5rem 2rem}.container{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c1);font-weight:400;margin-bottom:1rem}
+h2{font-family:'Baskervville',serif;font-size:clamp(1.8rem,3vw,3rem);color:var(--dark);margin-bottom:1rem;line-height:1.2;font-weight:400}h2 em{color:var(--c1);font-style:italic}
+.sub{color:var(--sub);font-size:.97rem;font-weight:300;max-width:540px;margin-bottom:3rem;line-height:1.9}
+.approches-section{background:#fff}.appr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm)}
+@media(max-width:768px){.appr-grid{grid-template-columns:1fr}}
+.acard{background:#fff;padding:2.5rem 2rem;transition:all .3s}.acard:hover{background:var(--cream)}
+.ac-icon{font-size:2rem;display:block;margin-bottom:1rem}.acard h3{font-family:'Baskervville',serif;font-size:1.15rem;color:var(--dark);margin-bottom:.5rem;font-weight:400}
+.acard p{font-size:.87rem;color:var(--sub);font-weight:300;line-height:1.7}
+.about-section{background:var(--warm)}.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.about-g{grid-template-columns:1fr;gap:3rem}}
+.about-text p{color:var(--sub);font-weight:300;margin-bottom:1.2rem;line-height:1.9}
+.about-mods{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.lm{background:#fff;color:var(--c1);border:1px solid rgba(0,0,0,.1);padding:.3rem .85rem;font-size:.78rem}
+.about-box{background:var(--dark);padding:2.5rem;color:#fff}
+.lb-q{font-family:'Baskervville',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:2rem}
+.lb-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.lbs{background:rgba(255,255,255,.05);padding:1rem;text-align:center}
+.lbs-n{font-family:'Baskervville',serif;font-size:1.8rem;color:var(--c2);display:block}.lbs-l{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.35)}
+.publics-section{background:#fff}.pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:900px){.pub-grid{grid-template-columns:1fr 1fr}}@media(max-width:500px){.pub-grid{grid-template-columns:1fr}}
+.pcard{background:var(--cream);padding:2rem;text-align:center;border-bottom:2px solid var(--c1);transition:all .3s}.pcard:hover{transform:translateY(-4px)}
+.pc-icon{font-size:2rem;margin-bottom:.8rem;display:block}.pcard h3{font-family:'Baskervville',serif;font-size:1rem;color:var(--dark);margin-bottom:.3rem;font-weight:400}
+.pcard p{font-size:.82rem;color:var(--sub);font-weight:300}
+.avis-section{background:var(--cream)}.av-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:768px){.av-grid{grid-template-columns:1fr}}
+.av{background:#fff;padding:2rem;border-top:2px solid var(--c1)}.av-stars{color:var(--c1);margin-bottom:.8rem}
+.av-text{font-family:'Baskervville',serif;font-size:1rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:.8rem}
+.av-auth{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--c1);font-weight:500}
+.form-section{background:var(--dark)}.form-g{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+@media(max-width:768px){.form-g{grid-template-columns:1fr;gap:3rem}}
+.form-g .eyebrow{color:var(--c2)}.form-g h2{color:#fff}.form-g .sub{color:rgba(255,255,255,.5)}
+.fci{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);margin-bottom:.8rem}
+.fci h4{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:.1rem}
+.fci p,.fci a{font-size:.9rem;color:#fff;text-decoration:none}.fci a{color:var(--c2)}
+form{display:flex;flex-direction:column;gap:1.2rem}.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:500px){.frow{grid-template-columns:1fr}}
+label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:400;display:block;margin-bottom:.4rem}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.12);font-size:.92rem;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#fff;outline:none;transition:border .25s}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}input:focus,select:focus,textarea:focus{border-color:var(--c2)}
+select option{background:var(--dark)}textarea{resize:vertical}
+.btn-sub{background:var(--c1);color:#fff;padding:1rem 2.5rem;border:none;font-size:.9rem;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:all .3s;align-self:flex-start}.btn-sub:hover{background:var(--c2)}
+.fn{font-size:.78rem;color:rgba(255,255,255,.3);font-weight:300}
+footer{background:#080808;color:rgba(255,255,255,.3);text-align:center;padding:2rem;font-size:.82rem}footer strong{color:var(--c2)}
+</style>
+</head>
+<body>
+<nav><div class="nl">Jeanne <em>Bardot</em></div><a href="tel:+33666433292" class="nt">06 66 43 32 92</a></nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="tag">Art-thérapeute · Psychothérapeute · D.U. Médecine de Tours</div>
+      <h1>Jeanne Bardot<br><em>Art-thérapeute</em></h1>
+      <div class="specialites"><span class="spec">🎨 Art-thérapie</span><span class="spec">🖌️ Médiation artistique</span><span class="spec">🧠 Psychothérapie</span><span class="spec">✨ Expression créative</span><span class="spec">🎭 Jeu & Thérapie</span><span class="spec">🎓 D.U. Fac. Médecine Tours</span></div>
+      <p class="hero-desc">Art-thérapeute psychothérapeute titulaire d'un Diplôme Universitaire de la Faculté de Médecine François Rabelais de Tours. J'utilise la créativité et l'expression artistique comme voies de guérison et de connaissance de soi, dans un cadre thérapeutique bienveillant.</p>
+      <div class="stars">🌟</div>
+      <p class="rev">Psychothérapeute · Art-thérapeute · Ferme à 17h</p>
+      <div class="btns"><a href="#rdv" class="b1">Prendre rendez-vous</a><a href="tel:+33666433292" class="b2">06 66 43 32 92</a></div>
+    </div>
+    <div class="hero-info">
+      <div class="hi-title">Cabinet</div>
+      <div class="hi-item"><span class="hi-ic">📞</span><div><span class="hi-label">Téléphone</span><span class="hi-val">06 66 43 32 92</span></div></div><div class="hi-item"><span class="hi-ic">⏰</span><div><span class="hi-label">Horaires</span><span class="hi-val">Ferme à 17h · Sur rendez-vous</span></div></div><div class="hi-item"><span class="hi-ic">🎓</span><div><span class="hi-label">Formation</span><span class="hi-val">D.U. Art-thérapie · Fac. Médecine de Tours</span></div></div><div class="hi-item"><span class="hi-ic">🎨</span><div><span class="hi-label">Médiums</span><span class="hi-val">Peinture · Dessin · Sculpture · Écriture</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="approches-section" id="approches">
+  <div class="container">
+    <div class="eyebrow">Mon approche</div>
+    <h2>L'art comme voie<br>vers <em>soi-même</em></h2>
+    <div class="appr-grid"><div class="acard"><span class="ac-icon">🎨</span><h3>Art-thérapie</h3><p>Utilisation des arts plastiques — peinture, dessin, modelage, collage — comme médiateur thérapeutique pour exprimer ce que les mots ne peuvent pas dire.</p></div><div class="acard"><span class="ac-icon">🖌️</span><h3>Expression créative</h3><p>Le processus créatif lui-même est thérapeutique. Pas besoin de talent artistique — c'est l'intention et l'expression qui importent, pas le résultat esthétique.</p></div><div class="acard"><span class="ac-icon">🧠</span><h3>Psychothérapie médiatisée</h3><p>L'art-thérapie combine médiation artistique et travail psychothérapeutique : les productions artistiques deviennent support de verbalisation et de prise de conscience.</p></div><div class="acard"><span class="ac-icon">🎭</span><h3>Jeu & créativité</h3><p>Le jeu et la dimension ludique sont au cœur de mon approche — retrouver sa capacité créative, c'est aussi retrouver sa liberté d'être et d'agir dans le monde.</p></div><div class="acard"><span class="ac-icon">💔</span><h3>Traumas & émotions</h3><p>L'art-thérapie est particulièrement indiquée pour les personnes ayant des difficultés d'expression verbale, les traumas, les blocages émotionnels profonds.</p></div><div class="acard"><span class="ac-icon">👶</span><h3>Enfants & adultes</h3><p>L'art-thérapie s'adresse à tous les âges : enfants, adolescents et adultes — une approche accessible, inclusive et profondément humaniste.</p></div></div>
+  </div>
+</section>
+<section class="about-section">
+  <div class="container">
+    <div class="about-g">
+      <div class="about-text">
+        <div class="eyebrow">À propos</div>
+        <h2>Jeanne <em>Bardot</em></h2>
+        <p>Art-thérapeute psychothérapeute titulaire d'un Diplôme Universitaire d'art-thérapie de la Faculté de Médecine François Rabelais de Tours, je combine création artistique et accompagnement thérapeutique.</p><p>L'objectif de l'art-thérapie n'est pas de créer une œuvre artistique, mais de permettre un travail thérapeutique à partir du matériel plastique et des associations qu'il génère — émotions, affects, souvenirs, représentations.</p><p>Passionnée par l'art, l'humain, le jeu et le conseil, je reçois en cabinet jusqu'à 17h. Aucun talent artistique n'est requis — juste la curiosité de s'explorer autrement.</p>
+        <div class="about-mods"><span class="lm">Art-thérapeute</span><span class="lm">D.U. Fac. Médecine de Tours</span><span class="lm">Psychothérapeute</span><span class="lm">Peinture · Dessin · Modelage</span><span class="lm">Art · Humain · Jeu</span></div>
+      </div>
+      <div class="about-box">
+        <p class="lb-q">« L'art-thérapie exploite le potentiel artistique dans une visée thérapeutique — non pour créer de belles œuvres, mais pour créer une belle vie intérieure. »</p>
+        <div class="lb-stats"><div class="lbs"><span class="lbs-n">D.U.</span><div class="lbs-l">Art-thérapie</div></div><div class="lbs"><span class="lbs-n">Tours</span><div class="lbs-l">Fac. Médecine</div></div><div class="lbs"><span class="lbs-n">17h</span><div class="lbs-l">Ferme à</div></div><div class="lbs"><span class="lbs-n">Art</span><div class="lbs-l">& Thérapie</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="publics-section">
+  <div class="container">
+    <div class="eyebrow">Pour qui ?</div>
+    <h2>L'art-thérapie pour<br><em>tous et toutes</em></h2>
+    <div class="pub-grid"><div class="pcard"><span class="pc-icon">🎨</span><h3>Expression</h3><p>Difficultés à verbaliser, blocages...</p></div><div class="pcard"><span class="pc-icon">💔</span><h3>Traumas</h3><p>Blessures émotionnelles, deuil...</p></div><div class="pcard"><span class="pc-icon">👶</span><h3>Enfants</h3><p>Communication, difficultés scolaires...</p></div><div class="pcard"><span class="pc-icon">🌱</span><h3>Croissance</h3><p>Développement personnel, créativité...</p></div></div>
+  </div>
+</section>
+<section class="avis-section">
+  <div class="container">
+    <div class="eyebrow">Témoignages</div>
+    <h2>Nouveau cabinet · <em>Prenez RDV</em></h2>
+    <div class="av-grid"><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« L'art-thérapie avec Jeanne m'a ouvert des portes que je ne savais pas exister. Travailler avec la peinture et le dessin m'a permis d'accéder à des émotions enfouies que les mots n'atteignaient pas. Extraordinaire. »</p><div class="av-auth">Patient(e) · Cabinet</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Une approche unique et profondément humaine. Jeanne crée un espace de création et d'expression libre qui permet de se découvrir autrement. Je recommande vivement à ceux qui veulent explorer autrement. »</p><div class="av-auth">Patient(e) · Cabinet</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« L'art-thérapie de Jeanne Bardot est une révélation — pas besoin de talent, juste d'oser. Son accompagnement bienveillant et sa formation sérieuse (Faculté de Médecine de Tours) font toute la différence. »</p><div class="av-auth">Patient(e) · Cabinet</div></div></div>
+  </div>
+</section>
+<section class="form-section" id="rdv">
+  <div class="container">
+    <div class="form-g">
+      <div>
+        <div class="eyebrow">Rendez-vous</div>
+        <h2>Prenez<br><em>contact</em></h2>
+        <p class="sub">Je vous réponds rapidement pour organiser votre première séance.</p>
+        <div class="fci"><h4>Téléphone</h4><p><a href="tel:+33666433292">06 66 43 32 92</a></p></div>
+        <div class="fci"><h4>Lieu</h4><p>Cabinet · Sur rendez-vous</p></div>
+        <div class="fci"><h4>Horaires</h4><p>Ferme à 17h · Sur rendez-vous</p></div>
+      </div>
+      <form name="rdv-jeanne-bardot-art-therapeute" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rdv-jeanne-bardot-art-therapeute">
+        <p style="display:none"><input name="bot-field"></p>
+        <div class="frow">
+          <div><label>Nom *</label><input type="text" name="nom" required placeholder="Prénom Nom"></div>
+          <div><label>Téléphone *</label><input type="tel" name="tel" required placeholder="06 XX XX XX XX"></div>
+        </div>
+        <div><label>Type de consultation</label><select name="type"><option value="">-- Sélectionnez --</option><option>Séance d'art-thérapie individuelle</option><option>Art-thérapie enfant</option><option>Traumas & émotions</option><option>Expression créative & développement personnel</option><option>Première consultation découverte</option></select></div>
+        <div><label>Message</label><textarea name="message" rows="4" placeholder="Décrivez brièvement votre demande..."></textarea></div>
+        <button type="submit" class="btn-sub">Prendre rendez-vous</button>
+        <p class="fn">Confidentialité garantie · Secret professionnel absolu</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer><p><strong>Jeanne Bardot — Art-thérapeute · Psychothérapeute · D.U. Faculté de Médecine de Tours · 06 66 43 32 92</strong></p></footer>
+</body>
+</html>

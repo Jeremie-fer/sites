@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isabelle Denis — Gestalt-thérapeute · Psychopraticienne · Romans-sur-Isère</title>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#4a7a6a;--c2:#7aaa9a;--cream:#f4fbf8;--warm:#e4f2ec;--dark:#0e1e18;--text:#182820;--sub:#3a5a4a;--hero-bg:linear-gradient(160deg,#0e1e18 0%,#162c22 55%,#4a7a6a 100%)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nl{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);letter-spacing:.5px}
+.nl em{color:var(--c1);font-style:italic}
+.nt{background:var(--c1);color:#fff;padding:.5rem 1.3rem;border-radius:4px;font-size:.82rem;font-weight:500;text-decoration:none;transition:all .3s}.nt:hover{background:var(--c2)}
+.hero{min-height:100vh;background:var(--hero-bg);display:flex;align-items:center;padding:5rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:0;bottom:0;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.06);transform:translate(30%,30%)}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.tag{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c2);font-weight:400;margin-bottom:1.5rem}
+h1{font-family:'Baskervville',serif;font-size:clamp(2.5rem,4.5vw,4rem);color:#fff;line-height:1.1;margin-bottom:1rem;font-weight:400}
+h1 em{color:var(--c2);font-style:italic;display:block}
+.specialites{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.spec{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.85);padding:.25rem .75rem;font-size:.75rem}
+.hero-desc{color:rgba(255,255,255,.65);font-size:.95rem;font-weight:300;max-width:500px;margin-bottom:2rem;line-height:1.95}
+.stars{color:var(--c2);margin-bottom:.2rem}.rev{color:rgba(255,255,255,.38);font-size:.8rem;margin-bottom:2.5rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.b1{background:var(--c1);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:500;transition:all .3s}.b1:hover{background:var(--c2)}
+.b2{border:1px solid rgba(255,255,255,.22);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:300;transition:all .3s}.b2:hover{border-color:var(--c2);color:var(--c2)}
+.hero-info{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);padding:2rem}
+@media(max-width:900px){.hero-info{display:none}}
+.hi-title{font-family:'Baskervville',serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--c2);margin-bottom:1.2rem}
+.hi-item{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:flex-start;gap:.8rem}.hi-item:last-child{border:none}
+.hi-ic{font-size:.9rem;flex-shrink:0;margin-top:.2rem}.hi-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);display:block}
+.hi-val{font-size:.88rem;color:rgba(255,255,255,.82);font-weight:300}
+section{padding:5.5rem 2rem}.container{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c1);font-weight:400;margin-bottom:1rem}
+h2{font-family:'Baskervville',serif;font-size:clamp(1.8rem,3vw,3rem);color:var(--dark);margin-bottom:1rem;line-height:1.2;font-weight:400}h2 em{color:var(--c1);font-style:italic}
+.sub{color:var(--sub);font-size:.97rem;font-weight:300;max-width:540px;margin-bottom:3rem;line-height:1.9}
+.approches-section{background:#fff}.appr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm)}
+@media(max-width:768px){.appr-grid{grid-template-columns:1fr}}
+.acard{background:#fff;padding:2.5rem 2rem;transition:all .3s}.acard:hover{background:var(--cream)}
+.ac-icon{font-size:2rem;display:block;margin-bottom:1rem}.acard h3{font-family:'Baskervville',serif;font-size:1.15rem;color:var(--dark);margin-bottom:.5rem;font-weight:400}
+.acard p{font-size:.87rem;color:var(--sub);font-weight:300;line-height:1.7}
+.about-section{background:var(--warm)}.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.about-g{grid-template-columns:1fr;gap:3rem}}
+.about-text p{color:var(--sub);font-weight:300;margin-bottom:1.2rem;line-height:1.9}
+.about-mods{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.lm{background:#fff;color:var(--c1);border:1px solid rgba(0,0,0,.1);padding:.3rem .85rem;font-size:.78rem}
+.about-box{background:var(--dark);padding:2.5rem;color:#fff}
+.lb-q{font-family:'Baskervville',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:2rem}
+.lb-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.lbs{background:rgba(255,255,255,.05);padding:1rem;text-align:center}
+.lbs-n{font-family:'Baskervville',serif;font-size:1.8rem;color:var(--c2);display:block}.lbs-l{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.35)}
+.publics-section{background:#fff}.pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:900px){.pub-grid{grid-template-columns:1fr 1fr}}@media(max-width:500px){.pub-grid{grid-template-columns:1fr}}
+.pcard{background:var(--cream);padding:2rem;text-align:center;border-bottom:2px solid var(--c1);transition:all .3s}.pcard:hover{transform:translateY(-4px)}
+.pc-icon{font-size:2rem;margin-bottom:.8rem;display:block}.pcard h3{font-family:'Baskervville',serif;font-size:1rem;color:var(--dark);margin-bottom:.3rem;font-weight:400}
+.pcard p{font-size:.82rem;color:var(--sub);font-weight:300}
+.avis-section{background:var(--cream)}.av-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:768px){.av-grid{grid-template-columns:1fr}}
+.av{background:#fff;padding:2rem;border-top:2px solid var(--c1)}.av-stars{color:var(--c1);margin-bottom:.8rem}
+.av-text{font-family:'Baskervville',serif;font-size:1rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:.8rem}
+.av-auth{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--c1);font-weight:500}
+.form-section{background:var(--dark)}.form-g{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+@media(max-width:768px){.form-g{grid-template-columns:1fr;gap:3rem}}
+.form-g .eyebrow{color:var(--c2)}.form-g h2{color:#fff}.form-g .sub{color:rgba(255,255,255,.5)}
+.fci{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);margin-bottom:.8rem}
+.fci h4{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:.1rem}
+.fci p,.fci a{font-size:.9rem;color:#fff;text-decoration:none}.fci a{color:var(--c2)}
+form{display:flex;flex-direction:column;gap:1.2rem}.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:500px){.frow{grid-template-columns:1fr}}
+label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:400;display:block;margin-bottom:.4rem}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.12);font-size:.92rem;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#fff;outline:none;transition:border .25s}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}input:focus,select:focus,textarea:focus{border-color:var(--c2)}
+select option{background:var(--dark)}textarea{resize:vertical}
+.btn-sub{background:var(--c1);color:#fff;padding:1rem 2.5rem;border:none;font-size:.9rem;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:all .3s;align-self:flex-start}.btn-sub:hover{background:var(--c2)}
+.fn{font-size:.78rem;color:rgba(255,255,255,.3);font-weight:300}
+footer{background:#080808;color:rgba(255,255,255,.3);text-align:center;padding:2rem;font-size:.82rem}footer strong{color:var(--c2)}
+</style>
+</head>
+<body>
+<nav><div class="nl">Isabelle <em>Denis</em></div><a href="tel:+33662926841" class="nt">06 62 92 68 41</a></nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="tag">Gestalt-thérapeute · Psychopraticienne · Romans-sur-Isère · Drôme</div>
+      <h1>Isabelle Denis<br><em>Gestalt Thérapie</em></h1>
+      <div class="specialites"><span class="spec">🌿 Gestalt-thérapie</span><span class="spec">💬 Ici & maintenant</span><span class="spec">🧠 Corps · Émotions · Relation</span><span class="spec">🏥 Infirmière 15 ans</span><span class="spec">🎓 GREFOR Grenoble</span><span class="spec">🌐 Cabinet & Visio</span></div>
+      <p class="hero-desc">Psychopraticienne formée à la Gestalt-thérapie à l'institut GREFOR à Grenoble, membre du CEGt. Ancienne infirmière passionnée par la relation humaine, j'accompagne adultes et couples dans l'ici et maintenant — au cabinet à Romans-sur-Isère ou en visioconférence.</p>
+      <div class="stars">★★★★★</div>
+      <p class="rev">5,0 · 1 avis Google · Romans-sur-Isère · Drôme · Ferme à 20h</p>
+      <div class="btns"><a href="#rdv" class="b1">Prendre rendez-vous</a><a href="tel:+33662926841" class="b2">06 62 92 68 41</a></div>
+    </div>
+    <div class="hero-info">
+      <div class="hi-title">Cabinet · Romans-sur-Isère</div>
+      <div class="hi-item"><span class="hi-ic">📍</span><div><span class="hi-label">Lieu</span><span class="hi-val">Romans-sur-Isère · Drôme (26)</span></div></div><div class="hi-item"><span class="hi-ic">⏰</span><div><span class="hi-label">Horaires</span><span class="hi-val">Ferme à 20h · Sur rendez-vous</span></div></div><div class="hi-item"><span class="hi-ic">📞</span><div><span class="hi-label">Téléphone</span><span class="hi-val">06 62 92 68 41</span></div></div><div class="hi-item"><span class="hi-ic">🎓</span><div><span class="hi-label">Formation</span><span class="hi-val">GREFOR Grenoble · Membre CEGt</span></div></div><div class="hi-item"><span class="hi-ic">🌐</span><div><span class="hi-label">Modalités</span><span class="hi-val">Cabinet · Visioconférence</span></div></div><div class="hi-item"><span class="hi-ic">💶</span><div><span class="hi-label">Tarif</span><span class="hi-val">Dès 60€/séance</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="approches-section" id="approches">
+  <div class="container">
+    <div class="eyebrow">Mon approche</div>
+    <h2>La Gestalt-thérapie<br><em>ici et maintenant</em></h2>
+    <div class="appr-grid"><div class="acard"><span class="ac-icon">🌿</span><h3>Gestalt-thérapie</h3><p>Thérapie relationnelle et humaniste qui s'intéresse aux interactions de l'humain avec son environnement. Elle met l'accent sur la conscience de ce qui se passe dans l'instant présent.</p></div><div class="acard"><span class="ac-icon">🧠</span><h3>Corps · Émotions · Cognition</h3><p>La Gestalt travaille simultanément sur trois niveaux : corporel, émotionnel et cognitif — pour une prise de conscience globale et intégrée de ce qui nous traverse.</p></div><div class="acard"><span class="ac-icon">💬</span><h3>Relation thérapeutique</h3><p>La qualité de la relation entre le praticien et la personne est au cœur de la Gestalt. C'est dans cet espace d'engagement mutuel que le changement devient possible.</p></div><div class="acard"><span class="ac-icon">🌀</span><h3>Schémas répétitifs</h3><p>Identifier et comprendre les schémas relationnels qui se répètent pour retrouver la capacité de choisir librement sa façon d'être au monde.</p></div><div class="acard"><span class="ac-icon">💑</span><h3>Thérapie de couple</h3><p>Accompagner les couples dans leurs difficultés relationnelles, conflits, manques de communication — pour retrouver un contact authentique et une complicité renouvelée.</p></div><div class="acard"><span class="ac-icon">🌐</span><h3>Visioconférence</h3><p>Séances disponibles en visioconférence pour plus de flexibilité, avec la même qualité d'accompagnement qu'en cabinet.</p></div></div>
+  </div>
+</section>
+<section class="about-section">
+  <div class="container">
+    <div class="about-g">
+      <div class="about-text">
+        <div class="eyebrow">À propos</div>
+        <h2>Isabelle <em>Denis</em></h2>
+        <p>Infirmière pendant 15 ans, la dimension relationnelle du soin m'a toujours passionnée. L'importance de considérer l'individu dans toutes ses dimensions, en lien avec son environnement, m'a naturellement conduit vers la Gestalt-thérapie.</p><p>Formée à la Gestalt-thérapie à l'Institut GREFOR (Gestalt thérapie Recherche et Formation) à Grenoble, je suis membre du Collège Européen de Gestalt-thérapie (CEGt). Je reçois adultes et couples à Romans-sur-Isère ou en visioconférence.</p><p>La Gestalt favorise notre capacité à ressentir, à identifier ce qui nous traverse d'instant en instant, pour pouvoir choisir notre façon d'être au monde. Un travail de conscience et de liberté.</p>
+        <div class="about-mods"><span class="lm">Gestalt-thérapeute</span><span class="lm">Membre CEGt</span><span class="lm">GREFOR Grenoble</span><span class="lm">Ancienne infirmière 15 ans</span><span class="lm">Romans-sur-Isère · Visio</span><span class="lm">Dès 60€</span></div>
+      </div>
+      <div class="about-box">
+        <p class="lb-q">« La Gestalt favorise notre capacité à ressentir et à identifier ce qui nous traverse d'instant en instant — pour choisir librement notre façon d'être au monde. »</p>
+        <div class="lb-stats"><div class="lbs"><span class="lbs-n">5,0★</span><div class="lbs-l">Google</div></div><div class="lbs"><span class="lbs-n">60€</span><div class="lbs-l">La séance</div></div><div class="lbs"><span class="lbs-n">15 ans</span><div class="lbs-l">Infirmière</div></div><div class="lbs"><span class="lbs-n">CEGt</span><div class="lbs-l">Membre</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="publics-section">
+  <div class="container">
+    <div class="eyebrow">Pour qui ?</div>
+    <h2>J'accompagne<br><em>adultes & couples</em></h2>
+    <div class="pub-grid"><div class="pcard"><span class="pc-icon">🧑</span><h3>Adultes</h3><p>Anxiété, dépression, burn-out, transitions...</p></div><div class="pcard"><span class="pc-icon">💑</span><h3>Couples</h3><p>Communication, conflits, reconstruction...</p></div><div class="pcard"><span class="pc-icon">🌀</span><h3>Schémas</h3><p>Répétitions, blocages, relations...</p></div><div class="pcard"><span class="pc-icon">🌱</span><h3>Développement</h3><p>Croissance personnelle, liberté...</p></div></div>
+  </div>
+</section>
+<section class="avis-section">
+  <div class="container">
+    <div class="eyebrow">Témoignages</div>
+    <h2>5,0 · 1 avis · <em>5 étoiles</em></h2>
+    <div class="av-grid"><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Un accompagnement en Gestalt-thérapie de grande qualité avec Isabelle. Son parcours d'infirmière lui donne une sensibilité et une compréhension du corps et de la relation vraiment précieuses. Je recommande. »</p><div class="av-auth">Patient(e) · Google</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Isabelle est une thérapeute remarquable — bienveillante, attentive et très professionnelle. Le travail sur l'ici et maintenant m'a aidé à comprendre des schémas relationnels profonds. »</p><div class="av-auth">Patient(e) · Romans</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« La Gestalt avec Isabelle est une expérience transformatrice. Sa formation GREFOR et son expérience d'infirmière font d'elle une praticienne hors du commun. Disponible jusqu'à 20h, c'est un vrai plus ! »</p><div class="av-auth">Patient(e) · Drôme</div></div></div>
+  </div>
+</section>
+<section class="form-section" id="rdv">
+  <div class="container">
+    <div class="form-g">
+      <div>
+        <div class="eyebrow">Rendez-vous</div>
+        <h2>Prenez<br><em>contact</em></h2>
+        <p class="sub">Je vous réponds rapidement pour organiser votre première séance.</p>
+        <div class="fci"><h4>Téléphone</h4><p><a href="tel:+33662926841">06 62 92 68 41</a></p></div>
+        <div class="fci"><h4>Lieu</h4><p>Romans-sur-Isère · Drôme (26) · Visio disponible</p></div>
+        <div class="fci"><h4>Horaires</h4><p>Ferme à 20h · Sur rendez-vous</p></div>
+      </div>
+      <form name="rdv-isabelle-denis-gestalt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rdv-isabelle-denis-gestalt">
+        <p style="display:none"><input name="bot-field"></p>
+        <div class="frow">
+          <div><label>Nom *</label><input type="text" name="nom" required placeholder="Prénom Nom"></div>
+          <div><label>Téléphone *</label><input type="tel" name="tel" required placeholder="06 XX XX XX XX"></div>
+        </div>
+        <div><label>Type de consultation</label><select name="type"><option value="">-- Sélectionnez --</option><option>Consultation individuelle</option><option>Thérapie de couple</option><option>Gestion anxiété / stress</option><option>Développement personnel</option><option>Burn-out / transitions</option><option>Première consultation</option></select></div>
+        <div><label>Message</label><textarea name="message" rows="4" placeholder="Décrivez brièvement votre demande..."></textarea></div>
+        <button type="submit" class="btn-sub">Prendre rendez-vous</button>
+        <p class="fn">Confidentialité garantie · Secret professionnel absolu</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer><p><strong>Isabelle Denis — Gestalt-thérapeute · Psychopraticienne · Romans-sur-Isère · 06 62 92 68 41</strong></p></footer>
+</body>
+</html>
