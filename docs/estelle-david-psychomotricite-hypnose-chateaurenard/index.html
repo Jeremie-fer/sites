@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Estelle David — Psychomotricité & Hypnose | Châteaurenard</title>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#1a6a8a;--c2:#4aa0c0;--dark:#081820;--cream:#f2fbff;--warm:#daf0f8;--text:#1c2020}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07)}
+.nl{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);letter-spacing:.5px}.nl em{color:var(--c1);font-style:italic}
+.nt{background:var(--c1);color:#fff;padding:.5rem 1.3rem;border-radius:4px;font-size:.82rem;font-weight:500;text-decoration:none;transition:.3s}.nt:hover{background:var(--c2)}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:5rem 2rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1400&q=80") center/cover no-repeat;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,#081820f2 0%,#081820cc 52%,#1a6a8acc 100%)}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.tag{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c2);font-weight:400;margin-bottom:1.5rem}
+h1{font-family:'Baskervville',serif;font-size:clamp(2.2rem,4vw,3.8rem);color:#fff;line-height:1.1;margin-bottom:1rem;font-weight:400}h1 em{color:var(--c2);font-style:italic;display:block}
+.specialites{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.spec{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.88);padding:.3rem .8rem;font-size:.75rem}
+.hero-desc{color:rgba(255,255,255,.72);font-size:.95rem;font-weight:300;max-width:500px;margin-bottom:2rem;line-height:1.95}
+.stars{color:var(--c2);margin-bottom:.2rem;font-size:1.1rem}.rev{color:rgba(255,255,255,.4);font-size:.82rem;margin-bottom:2.5rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.b1{background:var(--c1);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:500;transition:.3s}.b1:hover{background:var(--c2)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:300;transition:.3s}.b2:hover{border-color:var(--c2);color:var(--c2)}
+.hero-info{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);padding:2rem}
+@media(max-width:900px){.hero-info{display:none}}
+.hi-title{font-family:'Baskervville',serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--c2);margin-bottom:1.2rem}
+.hi-item{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-start;gap:.8rem}.hi-item:last-child{border:none}
+.hi-ic{font-size:.95rem;flex-shrink:0;margin-top:.1rem}.hi-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);display:block}
+.hi-val{font-size:.88rem;color:rgba(255,255,255,.82);font-weight:300}
+section{padding:5.5rem 2rem}.container{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c1);font-weight:400;margin-bottom:1rem}
+h2{font-family:'Baskervville',serif;font-size:clamp(1.8rem,3vw,2.8rem);color:var(--dark);margin-bottom:1rem;line-height:1.2;font-weight:400}h2 em{color:var(--c1);font-style:italic}
+.sub{color:#5a6a60;font-size:.97rem;font-weight:300;max-width:560px;margin-bottom:3rem;line-height:1.9}
+.approches-section{background:#fff}.appr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm)}
+@media(max-width:768px){.appr-grid{grid-template-columns:1fr}}
+.acard{background:#fff;padding:2.5rem 2rem;transition:.3s}.acard:hover{background:var(--cream)}
+.ac-icon{font-size:2.2rem;display:block;margin-bottom:1rem}.acard h3{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);margin-bottom:.6rem;font-weight:400}
+.acard p{font-size:.87rem;color:#5a6060;font-weight:300;line-height:1.75}
+.about-section{background:var(--warm)}.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.about-g{grid-template-columns:1fr;gap:3rem}}
+.about-text p{color:#4a5a55;font-weight:300;margin-bottom:1.2rem;line-height:1.9}
+.about-mods{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.lm{background:#fff;color:var(--c1);border:1px solid rgba(0,0,0,.1);padding:.35rem .9rem;font-size:.78rem}
+.about-box{background:var(--dark);padding:2.5rem;color:#fff}
+.lb-q{font-family:'Baskervville',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:2rem}
+.lb-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.lbs{background:rgba(255,255,255,.06);padding:1rem;text-align:center}
+.lbs-n{font-family:'Baskervville',serif;font-size:1.8rem;color:var(--c2);display:block}.lbs-l{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.35)}
+.publics-section{background:#fff}.pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:900px){.pub-grid{grid-template-columns:1fr 1fr}}@media(max-width:500px){.pub-grid{grid-template-columns:1fr}}
+.pcard{background:var(--cream);padding:2rem;text-align:center;border-bottom:3px solid var(--c1);transition:.3s}.pcard:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.pc-icon{font-size:2rem;margin-bottom:.8rem;display:block}.pcard h3{font-family:'Baskervville',serif;font-size:1rem;color:var(--dark);margin-bottom:.3rem;font-weight:400}
+.pcard p{font-size:.82rem;color:#5a6060;font-weight:300}
+.avis-section{background:var(--cream)}.av-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:768px){.av-grid{grid-template-columns:1fr}}
+.av{background:#fff;padding:2rem;border-top:2px solid var(--c1)}.av-stars{color:var(--c1);margin-bottom:.8rem}
+.av-text{font-family:'Baskervville',serif;font-size:.98rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:.8rem}
+.av-auth{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--c1);font-weight:500}
+.form-section{background:var(--dark)}.form-g{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+@media(max-width:768px){.form-g{grid-template-columns:1fr;gap:3rem}}
+.form-g .eyebrow{color:var(--c2)}.form-g h2{color:#fff}.form-g .sub{color:rgba(255,255,255,.5)}
+.fci{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);margin-bottom:.8rem}
+.fci h4{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:.1rem}
+.fci p,.fci a{font-size:.9rem;color:#fff;text-decoration:none}.fci a{color:var(--c2)}
+form{display:flex;flex-direction:column;gap:1.2rem}.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:500px){.frow{grid-template-columns:1fr}}
+label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:400;display:block;margin-bottom:.4rem}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.12);font-size:.92rem;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#fff;outline:none;transition:.25s}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}input:focus,select:focus,textarea:focus{border-color:var(--c2);background:rgba(255,255,255,.08)}
+select option{background:var(--dark)}textarea{resize:vertical}
+.btn-sub{background:var(--c1);color:#fff;padding:1rem 2.5rem;border:none;font-size:.9rem;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:.3s;align-self:flex-start}.btn-sub:hover{background:var(--c2)}
+.fn{font-size:.78rem;color:rgba(255,255,255,.3);font-weight:300}
+footer{background:#06080a;color:rgba(255,255,255,.3);text-align:center;padding:2rem;font-size:.82rem}footer strong{color:var(--c2)}
+</style></head>
+<body>
+<nav><div class="nl">Estelle <em>David</em></div><a href="tel:+33698406737" class="nt">06 98 40 67 37</a></nav>
+<section class="hero"><div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="tag">Psychomotricité & Hypnose · Châteaurenard · Bouches-du-Rhône</div><h1>Estelle David<br><em>Psychomotricité & Hypnose</em></h1>
+      <div class="specialites"><span class="spec">🧠 Psychomotricienne DE</span><span class="spec">🌀 Hypnose thérapeutique</span><span class="spec">👶 Enfants & adultes</span><span class="spec">🎯 Dyspraxie · TDAH</span><span class="spec">💆 Relaxation</span><span class="spec">★ 5,0 · 3 avis</span></div>
+      <p class="hero-desc">Psychomotricienne diplômée d'État et praticienne en hypnose thérapeutique à Châteaurenard. Cette double compétence me permet de combiner rééducation psychomotrice et hypnose pour une prise en charge holistique des troubles moteurs, émotionnels et des apprentissages.</p>
+      <div class="stars">★★★★★</div><p class="rev">5,0 · 3 avis Google · Châteaurenard · BDR · Ferme à 18h30</p>
+      <div class="btns"><a href="#rdv" class="b1">Prendre rendez-vous</a><a href="tel:+33698406737" class="b2">06 98 40 67 37</a></div>
+    </div>
+    <div class="hero-info"><div class="hi-title">Cabinet · Châteaurenard (13)</div><div class="hi-item"><span class="hi-ic">📍</span><div><span class="hi-label">Lieu</span><span class="hi-val">Châteaurenard · Bouches-du-Rhône (13)</span></div></div><div class="hi-item"><span class="hi-ic">📞</span><div><span class="hi-label">Téléphone</span><span class="hi-val">06 98 40 67 37</span></div></div><div class="hi-item"><span class="hi-ic">⏰</span><div><span class="hi-label">Horaires</span><span class="hi-val">Ferme à 18h30 · Sur rendez-vous</span></div></div><div class="hi-item"><span class="hi-ic">✨</span><div><span class="hi-label">Spécialité</span><span class="hi-val">Psychomotricité + Hypnose</span></div></div></div>
+  </div>
+</section>
+<section class="approches-section" id="approches"><div class="container">
+  <div class="eyebrow">Mes approches</div><h2>Psychomotricité & Hypnose<br><em>une alliance corps-esprit unique</em></h2>
+  <p class="sub">Psychomotricienne diplômée d'État et praticienne en hypnose thérapeutique, j'offre une prise en charge doublement enrichie. La psychomotricité rééduque le corps dans sa globalité, tandis que l'hypnose agit sur l'inconscient pour lever les blocages émotionnels, réduire l'anxiété et renforcer les ressources intérieures — deux approches complémentaires au service de votre épanouissement.</p><div class="appr-grid"><div class="acard"><span class="ac-icon">🧠</span><h3>Bilan psychomoteur</h3><p>Évaluation standardisée et complète du développement psychomoteur : coordination, équilibre, tonus, schéma corporel, motricité fine et globale. Base indispensable pour construire un programme de rééducation personnalisé et ciblé.</p></div><div class="acard"><span class="ac-icon">🏃</span><h3>Rééducation psychomotrice</h3><p>Programme individualisé pour traiter les troubles de la coordination (dyspraxie), de l'attention (TDAH), du tonus, du schéma corporel. Approche ludique et progressive, adaptée à l'âge et aux intérêts de chaque patient.</p></div><div class="acard"><span class="ac-icon">✏️</span><h3>Graphomotricité & écriture</h3><p>Rééducation du geste graphique, de la préhension du crayon, de la posture et du tonus lors de l'écriture. Travail spécifique de la dysgraphie par exercices psychomoteurs et graphomoteurs progressifs.</p></div><div class="acard"><span class="ac-icon">🌀</span><h3>Hypnose thérapeutique</h3><p>L'hypnose thérapeutique permet d'accéder aux ressources inconscientes pour lever les blocages émotionnels, réduire l'anxiété, améliorer la confiance en soi et faciliter les apprentissages. Particulièrement efficace en complément de la rééducation psychomotrice.</p></div><div class="acard"><span class="ac-icon">💆</span><h3>Relaxation & gestion du stress</h3><p>Techniques de relaxation psychomotrice (Jacobson, Schultz, respiration) et d'hypnose pour réduire le stress, les tensions musculaires et l'anxiété. Apprentissage d'outils d'auto-régulation utilisables au quotidien.</p></div><div class="acard"><span class="ac-icon">👶</span><h3>Enfants & adolescents</h3><p>Accompagnement spécialisé des enfants et adolescents présentant des troubles du neurodéveloppement : dyspraxie, TDAH, anxiété scolaire, troubles de l'attention, difficultés d'apprentissage et de régulation émotionnelle.</p></div></div>
+</div></section>
+<section class="about-section" id="about"><div class="container"><div class="about-g">
+  <div class="about-text"><div class="eyebrow">À propos</div><h2>Estelle<br><em>David, psychomotricienne</em></h2><p>Psychomotricienne diplômée d'État et praticienne en hypnose thérapeutique à Châteaurenard dans les Bouches-du-Rhône, j'ai développé une pratique unique combinant rééducation psychomotrice et hypnose.</p><p>La psychomotricité rééduque le corps par le mouvement et le jeu. L'hypnose agit sur les représentations, les émotions et les ressources inconscientes. Ensemble, ces deux approches offrent une prise en charge globale et profondément efficace.</p><p>Je reçois enfants, adolescents et adultes jusqu'à 18h30 dans mon cabinet de Châteaurenard, dans un cadre serein et bienveillant propice à la rééducation et au lâcher-prise.</p><div class="about-mods"><span class="lm">Psychomotricienne DE</span><span class="lm">Hypnose thérapeutique</span><span class="lm">Châteaurenard · BDR</span><span class="lm">Enfants · Adolescents · Adultes</span><span class="lm">Ferme à 18h30</span></div></div>
+  <div class="about-box"><p class="lb-q">« Le corps et l'inconscient parlent la même langue — celle du soin, de la confiance et du mouvement vers soi-même. »</p><div class="lb-stats"><div class="lbs"><span class="lbs-n">5,0★</span><div class="lbs-l">Google</div></div><div class="lbs"><span class="lbs-n">3</span><div class="lbs-l">Avis</div></div><div class="lbs"><span class="lbs-n">18h30</span><div class="lbs-l">Ferme à</div></div><div class="lbs"><span class="lbs-n">2</span><div class="lbs-l">Spécialités</div></div></div></div>
+</div></div></section>
+<section class="publics-section"><div class="container">
+  <div class="eyebrow">Pour qui ?</div><h2>J'accompagne<br><em>corps et inconscient</em></h2>
+  <div class="pub-grid"><div class="pcard"><span class="pc-icon">👶</span><h3>Enfants</h3><p>DYS, TDAH, anxiété, coordination...</p></div><div class="pcard"><span class="pc-icon">🧒</span><h3>Adolescents</h3><p>Confiance, scolarité, régulation...</p></div><div class="pcard"><span class="pc-icon">🧑</span><h3>Adultes</h3><p>Hypnose, stress, psychosomatique...</p></div><div class="pcard"><span class="pc-icon">💆</span><h3>Relaxation</h3><p>Bien-être, lâcher-prise, équilibre...</p></div></div>
+</div></section>
+<section class="avis-section"><div class="container">
+  <div class="eyebrow">Témoignages</div><h2>3 avis · <em>5 étoiles</em></h2>
+  <div class="av-grid"><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Estelle propose quelque chose de rare : la combinaison de la psychomotricité et de l'hypnose. Mon fils a énormément progressé sur sa dyspraxie ET sur son anxiété scolaire en même temps. Remarquable ! »</p><div class="av-auth">Parent — Google</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Les séances d'Estelle sont à la fois rigoureuses (exercices psychomoteurs précis) et apaisantes (hypnose de relaxation). Ma fille en ressort toujours plus confiante et plus détendue. Je recommande. »</p><div class="av-auth">Parent — Google</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Estelle est une professionnelle rare qui a su allier deux approches complémentaires. Son accompagnement m'a aidé à gérer mon stress chronique et mes tensions posturales durablement. Merci ! »</p><div class="av-auth">Patient(e) — Google</div></div></div>
+</div></section>
+<section class="form-section" id="rdv"><div class="container"><div class="form-g">
+  <div><div class="eyebrow">Rendez-vous</div><h2>Prenez<br><em>contact</em></h2>
+    <p class="sub">Je vous réponds rapidement pour organiser votre première séance.</p>
+    <div class="fci"><h4>Téléphone</h4><p><a href="tel:+33698406737">06 98 40 67 37</a></p></div>
+    <div class="fci"><h4>Lieu</h4><p>Châteaurenard · Bouches-du-Rhône (13)</p></div>
+    <div class="fci"><h4>Horaires</h4><p>Ferme à 18h30 · Sur rendez-vous</p></div>
+  </div>
+  <form name="rdv-estelle-david-chateaurenard" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="rdv-estelle-david-chateaurenard">
+    <p style="display:none"><input name="bot-field"></p>
+    <div class="frow">
+      <div><label>Prénom Nom *</label><input type="text" name="nom" required placeholder="Votre nom"></div>
+      <div><label>Téléphone *</label><input type="tel" name="tel" required placeholder="06 XX XX XX XX"></div>
+    </div>
+    <div><label>Type de consultation</label><select name="type"><option value="">-- Sélectionnez --</option><option>Bilan psychomoteur</option><option>Rééducation psychomotrice</option><option>Rééducation graphomotricité</option><option>Hypnose thérapeutique</option><option>Relaxation / gestion du stress</option><option>Séance mixte psychomotricité + hypnose</option><option>Premier contact</option></select></div>
+    <div><label>Message</label><textarea name="message" rows="4" placeholder="Décrivez brièvement votre situation..."></textarea></div>
+    <button type="submit" class="btn-sub">Envoyer ma demande</button>
+    <p class="fn">Confidentialité garantie · Réponse sous 48h</p>
+  </form>
+</div></div></section>
+<footer><p><strong>Estelle David — Psychomotricienne DE · Hypnose thérapeutique · Châteaurenard · 06 98 40 67 37</strong></p></footer>
+</body></html>
