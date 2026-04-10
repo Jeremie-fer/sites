@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Alexia Bernard — Sophrologue · EFT · Hypnose | Rochefort-du-Gard Gard</title>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#7040a8;--c2:#a870d8;--dark:#18082a;--cream:#fdf8ff;--warm:#f0e8ff;--text:#1c2020}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07)}
+.nl{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);letter-spacing:.5px}.nl em{color:var(--c1);font-style:italic}
+.nt{background:var(--c1);color:#fff;padding:.5rem 1.3rem;border-radius:4px;font-size:.82rem;font-weight:500;text-decoration:none;transition:.3s}.nt:hover{background:var(--c2)}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:5rem 2rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80") center/cover no-repeat;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,#18082af0 0%,#18082ad0 52%,#7040a8cc 100%)}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.tag{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c2);font-weight:400;margin-bottom:1.5rem}
+h1{font-family:'Baskervville',serif;font-size:clamp(2.2rem,4vw,3.8rem);color:#fff;line-height:1.1;margin-bottom:1rem;font-weight:400}
+h1 em{color:var(--c2);font-style:italic;display:block}
+.specialites{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.spec{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.88);padding:.3rem .8rem;font-size:.75rem}
+.hero-desc{color:rgba(255,255,255,.72);font-size:.95rem;font-weight:300;max-width:500px;margin-bottom:2rem;line-height:1.95}
+.stars{color:var(--c2);margin-bottom:.2rem;font-size:1.1rem}
+.rev{color:rgba(255,255,255,.4);font-size:.82rem;margin-bottom:2.5rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap}
+.b1{background:var(--c1);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:500;transition:.3s}.b1:hover{background:var(--c2)}
+.b2{border:1px solid rgba(255,255,255,.25);color:#fff;padding:.95rem 2rem;text-decoration:none;font-size:.9rem;font-weight:300;transition:.3s}.b2:hover{border-color:var(--c2);color:var(--c2)}
+.hero-info{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);padding:2rem;backdrop-filter:blur(8px)}
+@media(max-width:900px){.hero-info{display:none}}
+.hi-title{font-family:'Baskervville',serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--c2);margin-bottom:1.2rem}
+.hi-item{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-start;gap:.8rem}.hi-item:last-child{border:none}
+.hi-ic{font-size:.95rem;flex-shrink:0;margin-top:.1rem}
+.hi-label{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);display:block}
+.hi-val{font-size:.88rem;color:rgba(255,255,255,.82);font-weight:300}
+section{padding:5.5rem 2rem}.container{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--c1);font-weight:400;margin-bottom:1rem}
+h2{font-family:'Baskervville',serif;font-size:clamp(1.8rem,3vw,2.8rem);color:var(--dark);margin-bottom:1rem;line-height:1.2;font-weight:400}
+h2 em{color:var(--c1);font-style:italic}
+.sub{color:#5a6a60;font-size:.97rem;font-weight:300;max-width:560px;margin-bottom:3rem;line-height:1.9}
+.approches-section{background:#fff}
+.appr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--warm)}
+@media(max-width:768px){.appr-grid{grid-template-columns:1fr}}
+.acard{background:#fff;padding:2.5rem 2rem;transition:.3s}.acard:hover{background:var(--cream)}
+.ac-icon{font-size:2.2rem;display:block;margin-bottom:1rem}
+.acard h3{font-family:'Baskervville',serif;font-size:1.1rem;color:var(--dark);margin-bottom:.6rem;font-weight:400}
+.acard p{font-size:.87rem;color:#5a6060;font-weight:300;line-height:1.75}
+.about-section{background:var(--warm)}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:768px){.about-g{grid-template-columns:1fr;gap:3rem}}
+.about-text p{color:#4a5a55;font-weight:300;margin-bottom:1.2rem;line-height:1.9}
+.about-mods{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.lm{background:#fff;color:var(--c1);border:1px solid rgba(0,0,0,.1);padding:.35rem .9rem;font-size:.78rem}
+.about-box{background:var(--dark);padding:2.5rem;color:#fff}
+.lb-q{font-family:'Baskervville',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:2rem}
+.lb-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.lbs{background:rgba(255,255,255,.06);padding:1rem;text-align:center}
+.lbs-n{font-family:'Baskervville',serif;font-size:1.8rem;color:var(--c2);display:block}
+.lbs-l{font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.35)}
+.publics-section{background:#fff}
+.pub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:900px){.pub-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.pub-grid{grid-template-columns:1fr}}
+.pcard{background:var(--cream);padding:2rem;text-align:center;border-bottom:3px solid var(--c1);transition:.3s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.pc-icon{font-size:2rem;margin-bottom:.8rem;display:block}
+.pcard h3{font-family:'Baskervville',serif;font-size:1rem;color:var(--dark);margin-bottom:.3rem;font-weight:400}
+.pcard p{font-size:.82rem;color:#5a6060;font-weight:300}
+.avis-section{background:var(--cream)}
+.av-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:768px){.av-grid{grid-template-columns:1fr}}
+.av{background:#fff;padding:2rem;border-top:2px solid var(--c1)}
+.av-stars{color:var(--c1);margin-bottom:.8rem;font-size:1.05rem}
+.av-text{font-family:'Baskervville',serif;font-size:.98rem;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:.8rem}
+.av-auth{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--c1);font-weight:500}
+.form-section{background:var(--dark)}
+.form-g{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+@media(max-width:768px){.form-g{grid-template-columns:1fr;gap:3rem}}
+.form-g .eyebrow{color:var(--c2)}.form-g h2{color:#fff}.form-g .sub{color:rgba(255,255,255,.5)}
+.fci{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);margin-bottom:.8rem}
+.fci h4{font-size:.62rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:.1rem}
+.fci p,.fci a{font-size:.9rem;color:#fff;text-decoration:none}.fci a{color:var(--c2)}
+form{display:flex;flex-direction:column;gap:1.2rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:500px){.frow{grid-template-columns:1fr}}
+label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:400;display:block;margin-bottom:.4rem}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.12);font-size:.92rem;font-family:'Inter',sans-serif;background:rgba(255,255,255,.05);color:#fff;outline:none;transition:.25s}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}
+input:focus,select:focus,textarea:focus{border-color:var(--c2);background:rgba(255,255,255,.08)}
+select option{background:var(--dark)}textarea{resize:vertical}
+.btn-sub{background:var(--c1);color:#fff;padding:1rem 2.5rem;border:none;font-size:.9rem;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;transition:.3s;align-self:flex-start}
+.btn-sub:hover{background:var(--c2)}
+.fn{font-size:.78rem;color:rgba(255,255,255,.3);font-weight:300}
+footer{background:#06080a;color:rgba(255,255,255,.3);text-align:center;padding:2rem;font-size:.82rem}
+footer strong{color:var(--c2)}
+</style>
+</head>
+<body>
+<nav><div class="nl">Alexia <em>Bernard</em></div><a href="tel:+33787015057" class="nt">07 87 01 50 57</a></nav>
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="tag">Sophrologue · EFT · Hypnose · Rochefort-du-Gard · Gard</div>
+      <h1>Alexia Bernard<br><em>Sophrologie · EFT · Hypnose</em></h1>
+      <div class="specialites"><span class="spec">🧘 Sophrologue certifiée</span><span class="spec">⚡ EFT clinique</span><span class="spec">🌀 Hypnose thérapeutique</span><span class="spec">🚭 Arrêt du tabac</span><span class="spec">👶 Adultes & enfants</span><span class="spec">★ 5,0 · 21 avis</span></div>
+      <p class="hero-desc">Sophrologue, praticienne EFT et hypnose thérapeutique à Rochefort-du-Gard dans le Gard. Forte de 21 avis à 5 étoiles, Alexia vous accompagne avec écoute, bienveillance et un large panel d'outils pour gérer le stress, retrouver l'équilibre et développer vos ressources.</p>
+      <div class="stars">★★★★★</div>
+      <p class="rev">5,0 · 21 avis Google · 5 Chemin de la Croix de Saze · Rochefort-du-Gard</p>
+      <div class="btns"><a href="#rdv" class="b1">Prendre rendez-vous</a><a href="tel:+33787015057" class="b2">07 87 01 50 57</a></div>
+    </div>
+    <div class="hero-info"><div class="hi-title">Cabinet · Rochefort-du-Gard (30)</div><div class="hi-item"><span class="hi-ic">📍</span><div><span class="hi-label">Adresse</span><span class="hi-val">5 Chemin de la Croix de Saze, 30650 Rochefort-du-Gard</span></div></div><div class="hi-item"><span class="hi-ic">📞</span><div><span class="hi-label">Téléphone</span><span class="hi-val">07 87 01 50 57</span></div></div><div class="hi-item"><span class="hi-ic">⭐</span><div><span class="hi-label">Google</span><span class="hi-val">5,0 · 21 avis</span></div></div><div class="hi-item"><span class="hi-ic">💳</span><div><span class="hi-label">Paiement</span><span class="hi-val">Chèques et espèces · Mutuelle éventuelle</span></div></div></div>
+  </div>
+</section>
+<section class="approches-section" id="approches"><div class="container">
+  <div class="eyebrow">Mes approches</div>
+  <h2>Sophrologie · EFT · Hypnose<br><em>pour retrouver équilibre et sérénité</em></h2>
+  <p class="sub">La sophrologie est une méthode psycho-corporelle qui associe respiration, relaxation musculaire et visualisation positive pour harmoniser corps et esprit. Complétée par l'EFT (Emotional Freedom Techniques) — libération émotionnelle par tapotement — et l'hypnose thérapeutique, Alexia dispose d'un large panel d'outils complémentaires pour s'adapter à chaque situation.</p>
+  <div class="appr-grid"><div class="acard"><span class="ac-icon">🧘</span><h3>Sophrologie</h3><p>Méthode psycho-corporelle fondée sur la respiration, la relaxation et la visualisation positive. La pratique régulière permet de libérer les tensions, de renforcer la confiance en soi et de développer une sérénité durable dans le quotidien.</p></div><div class="acard"><span class="ac-icon">⚡</span><h3>EFT — Emotional Freedom Techniques</h3><p>Technique de libération émotionnelle par tapotement sur les méridiens d'acupuncture. L'EFT permet de neutraliser rapidement les émotions négatives, les phobies, le stress et les traumatismes légers, tout en renforçant les ressources positives.</p></div><div class="acard"><span class="ac-icon">🌀</span><h3>Hypnose thérapeutique</h3><p>L'hypnose permet d'accéder aux ressources inconscientes pour lever les blocages, modifier les comportements limitants et faciliter des changements durables. Efficace pour le stress, les phobies, la confiance en soi et les addictions.</p></div><div class="acard"><span class="ac-icon">🚭</span><h3>Arrêt du tabac</h3><p>Accompagnement spécialisé pour l'arrêt du tabac par sophrologie et hypnose. Travail sur les déclencheurs, les habitudes ancrées et le renforcement de la motivation pour un sevrage tabagique durable et serein.</p></div><div class="acard"><span class="ac-icon">😰</span><h3>Gestion du stress & burn-out</h3><p>Accompagnement des états anxieux, du stress chronique et du burn-out professionnel. Techniques de relaxation, de respiration et de recadrage mental pour retrouver calme, énergie et perspective.</p></div><div class="acard"><span class="ac-icon">👶</span><h3>Enfants & adolescents</h3><p>Alexia accompagne aussi bien les adultes que les enfants avec des techniques adaptées à chacun. Sophrologie ludique pour les jeunes : gestion du stress scolaire, troubles du sommeil, confiance en soi.</p></div></div>
+</div></section>
+<section class="about-section" id="about"><div class="container"><div class="about-g">
+  <div class="about-text">
+    <div class="eyebrow">À propos</div>
+    <h2>Alexia<br><em>Bernard, sophrologue</em></h2>
+    <p>Sophrologue, praticienne EFT et hypnose thérapeutique à Rochefort-du-Gard dans le Gard, Alexia Bernard est reconnue pour sa grande écoute, sa bienveillance et l'efficacité de ses accompagnements — 21 avis Google à 5 étoiles en témoignent.</p><p>Elle dispose d'une large palette d'outils pour s'adapter à chaque situation et à chaque personne : sophrologie, EFT clinique, hypnose thérapeutique et techniques d'arrêt du tabac. Elle intervient en cabinet individuel, en groupe et dans un cadre professionnel.</p><p>Ses patients soulignent unanimement sa finesse d'analyse, sa capacité à mettre en confiance rapidement et la qualité durable des bénéfices ressentis après ses séances.</p>
+    <div class="about-mods"><span class="lm">Sophrologue certifiée</span><span class="lm">Praticienne EFT</span><span class="lm">Hypnose thérapeutique</span><span class="lm">Rochefort-du-Gard · Gard</span><span class="lm">Cabinet · Groupe · Entreprise</span></div>
+  </div>
+  <div class="about-box">
+    <p class="lb-q">« Alexia fait preuve d'une grande écoute et de beaucoup de bienveillance. Elle a une analyse très fine de chaque situation ainsi qu'un panel d'outils sérieux et efficaces. »</p>
+    <div class="lb-stats"><div class="lbs"><span class="lbs-n">5,0★</span><div class="lbs-l">Google</div></div><div class="lbs"><span class="lbs-n">21</span><div class="lbs-l">Avis</div></div><div class="lbs"><span class="lbs-n">3</span><div class="lbs-l">Approches</div></div><div class="lbs"><span class="lbs-n">Gard</span><div class="lbs-l">(30)</div></div></div>
+  </div>
+</div></div></section>
+<section class="publics-section"><div class="container">
+  <div class="eyebrow">Pour qui ?</div>
+  <h2>J'accompagne<br><em>avec bienveillance et efficacité</em></h2>
+  <div class="pub-grid"><div class="pcard"><span class="pc-icon">😰</span><h3>Stress & anxiété</h3><p>Burn-out, tensions, troubles anxieux...</p></div><div class="pcard"><span class="pc-icon">🚭</span><h3>Tabac & addictions</h3><p>Arrêt tabac, habitudes nuisibles...</p></div><div class="pcard"><span class="pc-icon">💤</span><h3>Sommeil</h3><p>Insomnie, réveils nocturnes, ruminations...</p></div><div class="pcard"><span class="pc-icon">⭐</span><h3>Confiance</h3><p>Estime de soi, affirmation, blocages...</p></div></div>
+</div></section>
+<section class="avis-section"><div class="container">
+  <div class="eyebrow">Témoignages</div>
+  <h2>21 avis · <em>5 étoiles</em></h2>
+  <div class="av-grid"><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Alexia fait preuve d'une grande écoute et de beaucoup de bienveillance. Elle a une analyse très fine de chaque situation ainsi qu'un panel d'outils sérieux et efficaces. Je recommande vivement ! »</p><div class="av-auth">Avis Google — Janvier 2024</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Alexia est tout simplement géniale ! Elle accompagne aussi bien les adultes que les enfants, avec des techniques adaptées à chacun. On se sent immédiatement en confiance avec elle : on est au bon endroit, avec la bonne personne. »</p><div class="av-auth">Jouvenal Lucie — Google</div></div><div class="av"><div class="av-stars">★★★★★</div><p class="av-text">« Bienveillance, écoute, détente... C'est ce que vous pouvez être sûr de retrouver aux côtés d'Alexia. Les séances sont toujours différentes mais efficaces, et pleines de petits tips réutilisables au quotidien. »</p><div class="av-auth">Avis Google — Google</div></div></div>
+</div></section>
+<section class="form-section" id="rdv"><div class="container"><div class="form-g">
+  <div>
+    <div class="eyebrow">Rendez-vous</div>
+    <h2>Prenez<br><em>contact</em></h2>
+    <p class="sub">Je vous réponds rapidement pour organiser votre première séance.</p>
+    <div class="fci"><h4>Téléphone</h4><p><a href="tel:+33787015057">07 87 01 50 57</a></p></div>
+    <div class="fci"><h4>Lieu</h4><p>5 Chemin de la Croix de Saze, 30650 Rochefort-du-Gard</p></div>
+    <div class="fci"><h4>Horaires</h4><p>Sur rendez-vous · 07 87 01 50 57</p></div>
+  </div>
+  <form name="rdv-alexia-bernard-sophrologue-rochefort" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="rdv-alexia-bernard-sophrologue-rochefort">
+    <p style="display:none"><input name="bot-field"></p>
+    <div class="frow">
+      <div><label>Prénom Nom *</label><input type="text" name="nom" required placeholder="Votre nom"></div>
+      <div><label>Téléphone *</label><input type="tel" name="tel" required placeholder="06 XX XX XX XX"></div>
+    </div>
+    <div><label>Type de consultation</label>
+      <select name="type"><option value="">-- Sélectionnez --</option><option>Séance individuelle de sophrologie</option><option>EFT — libération émotionnelle</option><option>Hypnose thérapeutique</option><option>Arrêt du tabac</option><option>Gestion du stress / burn-out</option><option>Troubles du sommeil</option><option>Confiance en soi</option><option>Premier contact</option></select>
+    </div>
+    <div><label>Message</label><textarea name="message" rows="4" placeholder="Décrivez brièvement votre situation..."></textarea></div>
+    <button type="submit" class="btn-sub">Envoyer ma demande</button>
+    <p class="fn">Confidentialité garantie · Réponse sous 48h</p>
+  </form>
+</div></div></section>
+<footer><p><strong>Alexia Bernard — Sophrologue · EFT · Hypnose · 5 Chemin de la Croix de Saze, 30650 Rochefort-du-Gard · 07 87 01 50 57</strong></p></footer>
+</body></html>
