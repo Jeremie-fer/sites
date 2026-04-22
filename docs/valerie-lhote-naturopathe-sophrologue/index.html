@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Valérie LHOTE — Naturopathe · Sophrologue · Infirmière | Saint-Julien-les-Rosiers Gard</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c1:#4A7A3A; --c2:#5E9248; --c3:#8AC26A;
+  --slate:#0A1A08; --slate2:#122010;
+  --sand:#F8F4EE; --sand2:#F0EAE0; --sand3:#E8E0D4;
+  --text:#1E2830; --muted:#6A7A88; --border:rgba(46,65,87,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:var(--text);background:var(--sand);line-height:1.78;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:200;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+nav.sc{background:rgba(248,244,238,.97);backdrop-filter:blur(12px);box-shadow:0 2px 24px rgba(0,0,0,.08);padding:.85rem 3rem}
+.logo{text-decoration:none;display:flex;flex-direction:column}
+.logo-n{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:500;color:#fff;letter-spacing:.02em} nav.sc .logo-n{color:var(--slate)}
+.logo-s{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.1rem} nav.sc .logo-s{color:var(--muted)}
+.nav-l{display:flex;align-items:center;gap:2rem}
+.nav-a{color:rgba(255,255,255,.75);font-size:.78rem;letter-spacing:.08em;text-decoration:none;transition:color .25s} nav.sc .nav-a{color:var(--muted)}
+.nav-a:hover{color:#fff} nav.sc .nav-a:hover{color:var(--c1)}
+.nav-cta{background:var(--c1);color:#fff;padding:.48rem 1.4rem;border-radius:50px;font-size:.75rem;font-weight:600;text-decoration:none;transition:all .3s} .nav-cta:hover{background:var(--slate)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burger span{width:22px;height:1.5px;background:#fff;display:block;transition:all .35s} nav.sc .burger span{background:var(--slate)}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,4.5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-4.5px)}
+.mob{display:none;position:fixed;inset:0;z-index:199;background:var(--slate);flex-direction:column;justify-content:center;align-items:center;gap:2.2rem}
+.mob.open{display:flex}
+.mob a{font-family:'Fraunces',serif;font-size:2.1rem;color:rgba(255,255,255,.9);text-decoration:none;font-style:italic} .mob a:hover{color:var(--c3)}
+.mob-x{position:absolute;top:1.8rem;right:2rem;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);cursor:pointer;background:none;border:none;font-family:'Nunito Sans',sans-serif}
+.mob-tel{font-size:.88rem;color:var(--c3);font-style:normal;margin-top:.4rem;font-family:'Nunito Sans',sans-serif}
+@media(max-width:920px){.nav-l{display:none}.burger{display:flex}nav{padding:1rem 1.4rem}nav.sc{padding:.82rem 1.4rem}}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--slate);display:flex;align-items:center;padding:0 3rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:#1A4810}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.25}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,#0A1A08f8 0%,#0A1A08c0 50%,#4A7A3Ab0 100%)}
+.hero-dl{position:absolute;right:-1%;top:50%;transform:translateY(-50%);font-family:'Fraunces',serif;font-size:clamp(20rem,28vw,38rem);color:rgba(255,255,255,.025);line-height:1;pointer-events:none;font-style:italic}
+.hero-in{max-width:1100px;margin:0 auto;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;padding:9rem 0 5rem}
+@media(max-width:920px){.hero-in{grid-template-columns:1fr;padding:8rem 0 4rem;gap:2rem}}
+@media(max-width:600px){.hero{padding:0 1.4rem}.hero-in{padding:7rem 0 3.5rem}}
+.hero-tag{display:inline-flex;align-items:center;gap:.8rem;margin-bottom:1.8rem}
+.hero-tag-line{width:32px;height:2px;background:var(--c3);border-radius:1px}
+.hero-tag span{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:var(--c3);font-weight:600}
+h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:400;color:#fff;line-height:1.06;margin-bottom:1.5rem}
+h1 em{color:var(--c3);font-style:italic}
+.hero-desc{font-size:1rem;color:rgba(255,255,255,.62);font-weight:300;max-width:460px;line-height:2;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1.2rem;flex-wrap:wrap}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;row-gap:1.5rem}
+.hcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:2.4rem;display:none}
+@media(min-width:921px){.hcard{display:block}}
+.hcard-ttl{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--c3);margin-bottom:1.6rem;font-weight:600}
+.ci{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.08)} .ci:last-child{border:none}
+.ci-ic{width:36px;height:36px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ci-lbl{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.2rem;font-weight:600}
+.ci-val{font-size:.87rem;color:#fff;font-weight:300} .ci-val a{color:var(--c3);text-decoration:none}
+
+/* STRIP */
+.strip{background:var(--slate2);padding:.88rem 0;overflow:hidden}
+.strip-i{display:flex;white-space:nowrap;animation:tick 38s linear infinite}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.si{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);flex-shrink:0;padding:0 2.5rem;font-weight:300}
+.si-d{color:var(--c3);opacity:.5;padding:0 .3rem}
+
+/* SECTIONS */
+section{padding:5.5rem 3rem} .container{max-width:1100px;margin:0 auto}
+@media(max-width:600px){section{padding:4rem 1.4rem}}
+.ey{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--c1);font-weight:700;margin-bottom:1rem;display:block}
+h2{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:400;color:var(--slate);line-height:1.15;margin-bottom:.9rem}
+h2 em{font-style:italic;color:var(--c1)}
+.sub{color:var(--muted);font-size:.93rem;font-weight:300;max-width:540px;line-height:1.95;margin-bottom:2.8rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
+@media(max-width:920px){.split{grid-template-columns:1fr;gap:3rem}}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:900px){.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.g3{grid-template-columns:1fr}}
+
+/* CARDS */
+.card{background:#fff;padding:2.4rem;border:1px solid var(--border);border-radius:12px;position:relative;overflow:hidden;transition:all .35s}
+.card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.card:hover::after{transform:scaleX(1)} .card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.card-ic{font-size:2.2rem;margin-bottom:1.3rem;display:block}
+.card h3{font-family:'Fraunces',serif;font-size:1.18rem;font-weight:500;color:var(--slate);margin-bottom:.5rem}
+.card p{font-size:.87rem;color:var(--muted);font-weight:300;line-height:1.82}
+.tag{display:inline-block;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c1);background:rgba(0,0,0,.04);padding:.2rem .7rem;border-radius:20px;margin:.8rem .3rem 0 0}
+
+/* DARK SECTION */
+.dark-s{background:var(--slate);padding:5.5rem 3rem}
+.dark-s h2{color:var(--sand)} .dark-s h2 em{color:var(--c3)} .dark-s .sub{color:rgba(255,255,255,.45)}
+.dk{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:2.3rem;border-radius:10px;transition:all .35s} .dk:hover{background:rgba(255,255,255,.09)}
+.dk-ic{font-size:2rem;margin-bottom:1rem;display:block}
+.dk h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:500;color:var(--sand);margin-bottom:.5rem;font-style:italic}
+.dk p{font-size:.87rem;color:rgba(255,255,255,.45);font-weight:300;line-height:1.82}
+@media(max-width:600px){.dark-s{padding:4rem 1.4rem}}
+
+/* NUMS */
+.nums{background:var(--slate);padding:3.5rem 3rem}
+.nums-g{display:grid;grid-template-columns:repeat(4,1fr);max-width:1100px;margin:0 auto}
+@media(max-width:680px){.nums-g{grid-template-columns:repeat(2,1fr)}}
+.ni{padding:1.8rem 1rem;text-align:center;border-right:1px solid rgba(255,255,255,.08)} .ni:last-child{border:none}
+.ni-n{font-family:'Fraunces',serif;font-size:2.8rem;color:var(--c3);display:block;line-height:1;font-style:italic}
+.ni-l{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:.5rem;display:block}
+
+/* AVIS */
+.sand-s{background:var(--sand2);padding:5.5rem 3rem} @media(max-width:600px){.sand-s{padding:4rem 1.4rem}}
+.av{background:#fff;padding:2.2rem;border:1px solid var(--border);border-radius:12px;transition:all .35s;position:relative;overflow:hidden}
+.av::before{content:'"';font-family:'Fraunces',serif;font-size:5rem;color:rgba(0,0,0,.04);position:absolute;top:.1rem;left:1.3rem;line-height:1}
+.av:hover{box-shadow:0 10px 36px rgba(0,0,0,.08);border-color:rgba(46,65,87,.2)}
+.av-s{color:var(--c1);font-size:.85rem;letter-spacing:.1em;margin-bottom:.8rem}
+.av-t{font-family:'Fraunces',serif;font-style:italic;font-size:.98rem;color:var(--text);line-height:1.72;margin-bottom:.8rem;position:relative;z-index:1}
+.av-a{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+/* QUOTE */
+.qt-s{background:var(--sand3);padding:5.5rem 3rem;text-align:center;position:relative;overflow:hidden} @media(max-width:600px){.qt-s{padding:4rem 1.4rem}}
+.qt-s::before{content:'"';font-family:'Fraunces',serif;font-size:18rem;color:rgba(46,65,87,.05);position:absolute;top:-2rem;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none}
+.qt{font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-style:italic;color:var(--slate);max-width:760px;margin:0 auto 1.2rem;line-height:1.52;position:relative;z-index:1}
+.qt-src{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--c1);font-weight:600;position:relative;z-index:1}
+
+/* PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.pill{font-size:.65rem;letter-spacing:.08em;color:var(--slate);background:var(--sand2);padding:.3rem .85rem;border-radius:30px;border:1px solid var(--border)}
+
+/* BUTTONS */
+.btn1{display:inline-flex;align-items:center;gap:.55rem;background:var(--c1);color:#fff;padding:.88rem 2rem;border-radius:50px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.btn1:hover{background:var(--slate);transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+.btn2w{display:inline-flex;align-items:center;gap:.55rem;border:1.5px solid rgba(255,255,255,.35);color:rgba(255,255,255,.85);padding:.88rem 2rem;border-radius:50px;font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.btn2w:hover{border-color:var(--c3);color:var(--c3)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--slate),var(--slate2));padding:5.5rem 3rem;text-align:center;position:relative;overflow:hidden} @media(max-width:600px){.cta{padding:4rem 1.4rem}}
+.cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.04),transparent 60%)}
+.cta h2{color:#fff;position:relative;z-index:1} .cta h2 em{color:var(--c3)}
+.cta p{color:rgba(255,255,255,.5);max-width:480px;margin:.8rem auto 2.2rem;font-size:.93rem;font-weight:300;position:relative;z-index:1;line-height:1.9}
+
+/* FORM */
+.form-wrap{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:3rem}
+form{display:flex;flex-direction:column;gap:1.2rem}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem} @media(max-width:540px){.fr{grid-template-columns:1fr}}
+label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);font-weight:700;display:block;margin-bottom:.38rem}
+input,select,textarea{width:100%;padding:.88rem 1.1rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:8px;font-family:'Nunito Sans',sans-serif;font-size:.9rem;color:#fff;outline:none;transition:border .25s}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.22)}
+input:focus,select:focus,textarea:focus{border-color:var(--c3)}
+select option{background:var(--slate)} textarea{resize:vertical;min-height:110px}
+.btn-sub{background:var(--c1);color:#fff;padding:1rem 2.4rem;border:none;border-radius:50px;font-family:'Nunito Sans',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;align-self:flex-start}
+.btn-sub:hover{background:var(--c2);transform:translateY(-2px)}
+.fnote{font-size:.73rem;color:rgba(255,255,255,.28);font-style:italic}
+.dark-s .ey{color:var(--c3)}
+
+/* FOOTER */
+footer{background:var(--slate);padding:4.5rem 3rem 2rem;border-top:1px solid rgba(255,255,255,.07)}
+.fg{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07)}
+@media(max-width:920px){.fg{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:480px){.fg{grid-template-columns:1fr;gap:1.5rem}footer{padding:3.5rem 1.4rem 1.5rem}}
+.fb-n{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--sand);font-style:italic}
+.fb-s{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin:.3rem 0 1.1rem}
+.fb-d{font-size:.82rem;color:rgba(255,255,255,.32);line-height:1.85;font-weight:300}
+.fc h5{font-size:.56rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:1.1rem;font-weight:700}
+.fc a,.fc p{display:block;color:rgba(255,255,255,.38);font-size:.82rem;text-decoration:none;margin-bottom:.45rem;transition:color .2s;font-weight:300}
+.fc a:hover{color:var(--c3)}
+.fb-bot{max-width:1100px;margin:1.6rem auto 0;display:flex;justify-content:space-between;font-size:.7rem;color:rgba(255,255,255,.18);flex-wrap:wrap;gap:.5rem}
+html,body{overflow-x:hidden;max-width:100vw} img{max-width:100%;display:block}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <span class="logo-n">Valérie LHOTE</span>
+    <span class="logo-s">Naturopathe · Sophrologue · Infirmière · Saint-Julien-les-Rosiers</span>
+  </a>
+  <div class="nav-l">
+    <a href="#" class="nav-a act">Accueil</a>
+    <a href="#approche" class="nav-a">Mon approche</a>
+    <a href="#services" class="nav-a">Services</a>
+    <a href="#avis" class="nav-a">Témoignages</a>
+    <a href="#rdv" class="nav-a">Contact</a>
+    <a href="tel:+33613578803" class="nav-cta">Rendez-vous</a>
+  </div>
+  <button class="burger" id="brgr" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <button class="mob-x" onclick="closeMob()">✕ Fermer</button>
+  <a href="#" onclick="closeMob()">Accueil</a>
+  <a href="#approche" onclick="closeMob()">Mon approche</a>
+  <a href="#rdv" onclick="closeMob()">Contact</a>
+  <a href="tel:+33613578803" class="mob-tel">06 13 57 88 03</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1400&q=80" onerror="this.onerror=null;this.style.opacity=0" loading="eager"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-dl">V</div>
+  <div class="hero-in">
+    <div>
+      <div class="hero-tag">
+        <div class="hero-tag-line"></div>
+        <span>Naturopathe · Sophrologue · Infirmière DE · Saint-Julien-les-Rosiers · Gard</span>
+      </div>
+      <h1>Nature, <em>santé</em><br>et équilibre intérieur.</h1>
+      <p class="hero-desc">Valérie LHOTE, naturopathe, sophrologue et infirmière diplômée d'État à Saint-Julien-les-Rosiers dans le Gard. 3 avis 5★. Triple expertise au service de votre santé globale et naturelle.</p>
+      <div class="hero-btns">
+        <a href="#rdv" class="btn1">Prendre rendez-vous</a>
+        <a href="#approche" class="btn2w">Découvrir mon approche</a>
+      </div>
+      <div class="hero-stats">
+      <div>
+        <span style="font-family:'Fraunces',serif;font-size:2rem;color:var(--c3);display:block;line-height:1;font-style:italic">5,0★</span>
+        <span style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.3rem;display:block">3 avis Google</span>
+      </div>
+      <div>
+        <span style="font-family:'Fraunces',serif;font-size:2rem;color:var(--c3);display:block;line-height:1;font-style:italic">19h</span>
+        <span style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.3rem;display:block">Ferme à</span>
+      </div>
+      <div>
+        <span style="font-family:'Fraunces',serif;font-size:2rem;color:var(--c3);display:block;line-height:1;font-style:italic">3</span>
+        <span style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.3rem;display:block">Expertises complémentaires</span>
+      </div></div>
+    </div>
+    <div class="hcard">
+      <div class="hcard-ttl">Informations pratiques</div>
+      
+      <div class="ci">
+        <div class="ci-ic">📍</div>
+        <div><div class="ci-lbl">Lieu</div><div class="ci-val">Saint-Julien-les-Rosiers · Alès · Gard (30)</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic">📞</div>
+        <div><div class="ci-lbl">Téléphone</div><div class="ci-val"><a href="tel:+33613578803">06 13 57 88 03</a></div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic">⏰</div>
+        <div><div class="ci-lbl">Horaires</div><div class="ci-val">Ferme à 19h · Sur rendez-vous</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic">⭐</div>
+        <div><div class="ci-lbl">Google</div><div class="ci-val">5,0 · 3 avis</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip"><div class="strip-i"><span class="si">Naturopathie</span><span class="si-d">◆</span><span class="si">Sophrologie</span><span class="si-d">◆</span><span class="si">Aromathérapie</span><span class="si-d">◆</span><span class="si">Phytothérapie</span><span class="si-d">◆</span><span class="si">Nutrition</span><span class="si-d">◆</span><span class="si">Sophrologue enfant</span><span class="si-d">◆</span><span class="si">Infirmière DE</span><span class="si-d">◆</span><span class="si">Saint-Julien-les-Rosiers · Gard</span><span class="si-d">◆</span><span class="si">Naturopathie</span><span class="si-d">◆</span><span class="si">Sophrologie</span><span class="si-d">◆</span><span class="si">Aromathérapie</span><span class="si-d">◆</span><span class="si">Phytothérapie</span><span class="si-d">◆</span><span class="si">Nutrition</span><span class="si-d">◆</span><span class="si">Sophrologue enfant</span><span class="si-d">◆</span><span class="si">Infirmière DE</span><span class="si-d">◆</span><span class="si">Saint-Julien-les-Rosiers · Gard</span><span class="si-d">◆</span></div></div>
+
+<!-- APPROCHE / QU'EST-CE QUE -->
+<section id="approche" style="background:var(--sand)">
+<div class="container">
+  <div class="split">
+    <div>
+      <span class="ey">Mon approche</span>
+      <h2>Naturopathie &<br><em>sophrologie</em> pour votre santé.</h2>
+      <p style="color:var(--muted);font-size:.93rem;font-weight:300;line-height:2;margin-bottom:1.2rem">Infirmière diplômée d'État, naturopathe et sophrologue, je propose une approche unique qui associe la rigueur médicale et les pratiques naturelles pour accompagner votre santé dans sa globalité.</p>
+      <p style="color:var(--muted);font-size:.93rem;font-weight:300;line-height:2;margin-bottom:1.2rem">La naturopathie utilise les ressources naturelles (plantes, alimentation, huiles essentielles, hygiène de vie) pour renforcer les capacités d'autoguérison du corps. La sophrologie complète cet accompagnement sur le plan mental et émotionnel.</p>
+      <p style="color:var(--muted);font-size:.93rem;font-weight:300;line-height:2;margin-bottom:1.8rem">Je reçois à Saint-Julien-les-Rosiers et à Alès dans le Gard. Je suis également spécialisée en sophrologie pour les enfants.</p>
+      <div class="pills"><span class="pill">🌿 Naturopathe certifiée</span><span class="pill">🧘 Sophrologue</span><span class="pill">👶 Sophrologue enfant</span><span class="pill">🏥 Infirmière DE</span></div>
+      <div style="margin-top:2rem"><a href="#rdv" class="btn1">Prendre rendez-vous →</a></div>
+    </div>
+    <div>
+      <div style="height:520px;overflow:hidden;border-radius:12px;background:#3A6A28">
+        <img src="https://images.unsplash.com/photo-1540331547168-8b63109225b7?w=1400&q=80" onerror="this.onerror=null;this.style.opacity=0" style="width:100%;height:100%;object-fit:cover" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- NUMS -->
+<div class="nums"><div class="nums-g"><div class="ni"><span class="ni-n">5,0★</span><span class="ni-l">3 avis</span></div><div class="ni"><span class="ni-n">19h</span><span class="ni-l">Ferme à</span></div><div class="ni"><span class="ni-n">3</span><span class="ni-l">Expertises</span></div><div class="ni"><span class="ni-n">Enfants</span><span class="ni-l">Sophro spécialisée</span></div></div></div>
+
+<!-- SERVICES -->
+<section class="sand-s" id="services">
+<div class="container">
+  <span class="ey">Mes accompagnements</span>
+  <h2>Une approche <em>globale</em><br>de la santé.</h2>
+  <p class="sub">Naturopathie, sophrologie, aromathérapie, nutrition — une vision holistique pour retrouver équilibre et vitalité.</p>
+  <div class="g3">
+      <div class="card">
+        <span class="card-ic">🌿</span>
+        <h3>Naturopathie</h3>
+        <p>Bilan naturopathique, conseils en alimentation, phytothérapie, aromathérapie, hygiène de vie. Approche naturelle pour soutenir les capacités d'autoguérison du corps.</p>
+        <span class="tag">Naturopathie</span><span class="tag">Phytothérapie</span>
+      </div>
+      <div class="card">
+        <span class="card-ic">🧘</span>
+        <h3>Sophrologie</h3>
+        <p>Accompagnement sophrologique pour adultes et enfants : gestion du stress, sommeil, confiance en soi, anxiété. Techniques adaptées à chaque âge.</p>
+        <span class="tag">Sophrologue</span><span class="tag">Enfants</span>
+      </div>
+      <div class="card">
+        <span class="card-ic">🏥</span>
+        <h3>Expertise infirmière</h3>
+        <p>L'expérience infirmière garantit une approche rigoureuse et médicalement informée. Un regard clinique précieux pour orienter et sécuriser les accompagnements naturels.</p>
+        <span class="tag">Infirmière DE</span><span class="tag">Santé globale</span>
+      </div></div>
+</div>
+</section>
+
+<!-- MÉTHODE DARK -->
+<section class="dark-s">
+<div class="container">
+  <span class="ey">Champs d'application</span>
+  <h2>Naturopathie & sophrologie<br>pour <em>toutes</em> les situations.</h2>
+  <p class="sub">Fatigue chronique, stress, troubles digestifs, accompagnement féminin, enfants anxieux — une approche naturelle et douce.</p>
+  <div class="g3">
+      <div class="dk">
+        <span class="dk-ic">😰</span>
+        <h3>Stress & burn-out</h3>
+        <p>Naturopathie et sophrologie pour gérer le stress chronique et l'épuisement. Un protocole naturel et durable pour retrouver énergie et sérénité.</p>
+      </div>
+      <div class="dk">
+        <span class="dk-ic">🌸</span>
+        <h3>Accompagnement féminin</h3>
+        <p>Ménopause, fertilité, grossesse, post-partum — un accompagnement naturel et doux adapté aux grandes étapes de la vie féminine.</p>
+      </div>
+      <div class="dk">
+        <span class="dk-ic">👶</span>
+        <h3>Sophrologie enfant</h3>
+        <p>Techniques adaptées aux enfants : gestion des émotions, anxiété scolaire, troubles du sommeil. Des séances ludiques et efficaces.</p>
+      </div></div>
+</div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="sand-s" id="avis" style="background:var(--sand)">
+<div class="container">
+  <span class="ey">Témoignages</span>
+  <h2>Ce que disent <em>mes patients.</em></h2>
+  <p class="sub">3 témoignages 5 étoiles de patients à Saint-Julien-les-Rosiers.</p>
+  <div class="g3">
+      <div class="av">
+        <div class="av-s">★★★★★</div>
+        <p class="av-t">« Valérie est une praticienne remarquable. Son approche naturopathie + sophrologie est vraiment unique. J'ai retrouvé énergie et sérénité grâce à son bilan naturopathique. »</p>
+        <div class="av-a">Patient(e) · Gard</div>
+      </div>
+      <div class="av">
+        <div class="av-s">★★★★★</div>
+        <p class="av-t">« La sophrologie pour enfants avec Valérie a été une vraie révélation pour mon fils anxieux. En quelques séances, il a retrouvé confiance et dort mieux. Extraordinaire. »</p>
+        <div class="av-a">Parent · Saint-Julien-les-Rosiers</div>
+      </div>
+      <div class="av">
+        <div class="av-s">★★★★★</div>
+        <p class="av-t">« L'expertise infirmière de Valérie combinée à sa pratique naturopathique offre un accompagnement rare et précieux. Elle conseille avec rigueur et bienveillance. »</p>
+        <div class="av-a">Patient(e) · Gard</div>
+      </div></div>
+</div>
+</section>
+
+<!-- QUOTE -->
+<div class="qt-s">
+  <p class="qt">« La santé naturelle, c'est accompagner le corps dans ses propres ressources — la nature a souvent les solutions que la médecine seule ne trouve pas. »</p>
+  <span class="qt-src">Valérie LHOTE · Naturopathie · Sophrologie</span>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Commençons votre <em>chemin</em><br>vers la santé naturelle.</h2>
+  <p>Consultations à Saint-Julien-les-Rosiers et Alès dans le Gard. Jusqu'à 19h.</p>
+  <a href="#rdv" class="btn1" style="position:relative;z-index:1">Prendre rendez-vous →</a>
+</div>
+
+<!-- CONTACT + FORM -->
+<section class="dark-s" id="rdv">
+<div class="container">
+  <div class="split">
+    <div>
+      <span class="ey">Contact</span>
+      <h2 style="color:var(--sand)">Prenons <em>contact.</em></h2>
+      <p style="color:rgba(255,255,255,.5);font-size:.93rem;font-weight:300;line-height:1.9;margin-bottom:2.5rem">Contactez-moi pour un premier échange et organiser votre bilan naturopathique.</p>
+      
+      <div class="ci">
+        <div class="ci-ic">📍</div>
+        <div><div class="ci-lbl">Lieu</div><div class="ci-val">Saint-Julien-les-Rosiers · Alès · Gard (30)</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic">📞</div>
+        <div><div class="ci-lbl">Téléphone</div><div class="ci-val"><a href="tel:+33613578803">06 13 57 88 03</a></div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic">⏰</div>
+        <div><div class="ci-lbl">Horaires</div><div class="ci-val">Ferme à 19h · Sur rendez-vous</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic">⭐</div>
+        <div><div class="ci-lbl">Google</div><div class="ci-val">5,0 · 3 avis</div></div>
+      </div>
+    </div>
+    <div class="form-wrap">
+      <form name="rdv-valerie-lhote-saint-julien" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rdv-valerie-lhote-saint-julien">
+        <p style="display:none"><input name="bot-field"></p>
+        <div class="fr">
+          <div><label>Prénom Nom *</label><input type="text" name="nom" required placeholder="Votre nom complet"></div>
+          <div><label>Téléphone *</label><input type="tel" name="tel" required placeholder="06 XX XX XX XX"></div>
+        </div>
+        <div><label>Motif de consultation</label>
+          <select name="motif"><option value="">-- Sélectionnez --</option><option>Bilan naturopathique</option><option>Conseil alimentation / nutrition</option><option>Phytothérapie · Aromathérapie</option><option>Sophrologie adulte</option><option>Sophrologie enfant</option><option>Burn-out · Fatigue chronique</option><option>Premier contact</option></select>
+        </div>
+        <div><label>Message</label>
+          <textarea name="message" placeholder="Décrivez brièvement votre situation ou votre demande..."></textarea>
+        </div>
+        <button type="submit" class="btn-sub">Envoyer ma demande</button>
+        <p class="fnote">Confidentialité garantie · Réponse sous 48h</p>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="fg">
+  <div>
+    <div class="fb-n">Valérie LHOTE</div>
+    <span class="fb-s">Naturopathe · Sophrologue · Infirmière · Saint-Julien-les-Rosiers</span>
+    <p class="fb-d">Naturopathe, sophrologue et infirmière DE à Saint-Julien-les-Rosiers (30). Approche globale de la santé pour adultes et enfants.</p>
+  </div>
+  <div class="fc"><h5>Navigation</h5>
+    <a href="#">Accueil</a>
+    <a href="#approche">Mon approche</a>
+    <a href="#services">Services</a>
+    <a href="#avis">Témoignages</a>
+    <a href="#rdv">Contact</a>
+  </div>
+  <div class="fc"><h5>Spécialités</h5><a href="#approche">Naturopathie</a><a href="#approche">Sophrologie</a><a href="#approche">Sophrologue enfant</a><a href="#approche">Aromathérapie</a><a href="#approche">Nutrition</a></div>
+  <div class="fc"><h5>Contact</h5>
+    <a href="tel:+33613578803">06 13 57 88 03</a>
+    <p>Saint-Julien-les-Rosiers · Gard (30)</p><p>Ferme à 19h · Sur rendez-vous</p>
+  </div>
+</div>
+<div class="fb-bot">
+  <span>© 2025 Valérie LHOTE · Naturopathe · Sophrologue · Infirmière · Saint-Julien-les-Rosiers</span>
+  <span>Site réalisé par JFE Digital</span>
+</div>
+</footer>
+
+<script>
+(function(){
+  var n=document.querySelector('nav');
+  window.addEventListener('scroll',function(){n.classList.toggle('sc',scrollY>55)});
+  var b=document.getElementById('brgr'),m=document.getElementById('mob');
+  if(b&&m){
+    b.addEventListener('click',function(){
+      b.classList.toggle('open');m.classList.toggle('open');
+      document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+    });
+  }
+  window.closeMob=function(){
+    if(b)b.classList.remove('open');
+    if(m){m.classList.remove('open');document.body.style.overflow='';}
+  };
+})();
+</script>
+</body>
+</html>
